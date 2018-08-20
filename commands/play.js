@@ -121,7 +121,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
     if (playlist) return undefined;
-    else return message.channel.send(`<a:typing:460278161024745502> **${song.title}** has been added to the queue!`);
+    else return message.channel.send(`:rocket: **${song.title}** has been added to the queue!`);
   }
   return undefined;
 }
