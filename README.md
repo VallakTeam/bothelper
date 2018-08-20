@@ -1,27 +1,30 @@
-Welcome to Glitch
-=================
+<h1 align="center">YAGAMI</h1>
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+<p align="center">
+  <a href="https://discord.io/masamibot-official">
+    <img src="https://discordapp.com/api/guilds/430945153612513281/embed.png"></a>
+  <a href="https://patreon.com/masamiakizuki">
+    <img src="http://ionicabizau.github.io/badges/patreon.svg"></a>
+      <a href="https://twitter.com/intent/follow?screen_name=masami45_">
+        <img src="https://img.shields.io/twitter/follow/masami45_.svg?style=social&logo=twitter"
+            alt="follow on Twitter"></a>
+</p>
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+**YAGAMI** is bot that use [Discord.js](https://discord.js.org/#/) as the libs. Masami Music is
 
-Find out more [about Glitch](https://glitch.com/about).
+### List Commands
+> how to know the prefix ? Just mention the bot @masami and you will get the prefix.
 
+### Music
+<ul>
+  <li>Np : now playing</li>
+  <li>Pause : Pause the music</li>
+  <li>Play : Play the music, use : [music-name] || [url] || [playlist-url]</li>
+  <li>Queue : Show what music in queue</li>
+  <li>Resume : Resume the music you pause</li>
+  <li>Skip : Skip the music</li>
+  <li>Stop : Stop the music</li>
+  <li>Volume : Change the volume</li>
+ </ul>
 
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Fog Creek](https://fogcreek.com/)
--------------------
-
-\ ゜o゜)ノ
+<br />
