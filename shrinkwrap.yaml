@@ -728,6 +728,11 @@ packages:
     resolution:
       integrity: sha512-3g8lYefrRRzvGeSowdJKAKyks8oUpLEd/DyPV4eMhVlhJ0aNaZqIrNUIPuEWWTAoPqyFkfGrM67MC69baqn6vA==
   /node-opus/0.2.9:
+    cpu:
+      - x64
+      - arm
+      - arm64
+      - ia32
     dependencies:
       bindings: 1.2.1
       commander: 2.17.1
@@ -737,6 +742,11 @@ packages:
       node: '>=0.10.0'
     optionalDependencies:
       ogg-packet: 1.0.0
+    os:
+      - linux
+      - darwin
+      - win32
+      - freebsd
     requiresBuild: true
     resolution:
       integrity: sha512-+IIOdav5D7vHsuLDNk55t17kK2s6c1w4DbfKw8UQxZ635n+AO/SqDE3RpuO3PZKqpWjPtL/chzYZNVxz8/4TUQ==
@@ -1227,7 +1237,7 @@ packages:
     resolution:
       integrity: sha512-d+jthiJxSQ6yqCeCwwMggXYOjFSOJsD7ahvAAE1sFW9nVNnsA/roz91SFH1FzaMGS7/y7AnJfhVgpE9i8uYjJQ==
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 8
+shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   discord.js: ^11.3.2
