@@ -19,7 +19,7 @@ setInterval(() => {
 
 music.on('message', async message => {
 
-    let prefix = ';;';
+    let prefix = ';';
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
@@ -43,10 +43,5 @@ music.login(process.env.TOKEN);
 music.on("ready", async () => {
     console.log(`Logged in as : ${music.user.tag}`);
     console.log(`${music.user.username} is ready!`)
-                
-   function randomStatus() {
-        let status = [`Gunakan ;;play`, `Music Anjay Punya`, 'Bisa Atur Volume :*',]
-          let rstatus = Math.floor(Math.random() * status.length);
-        music.user.setActivity(status[rstatus], {type: 'STREAMING', url: "https://www.twitch.tv/verterid"});
-    }; setInterval(randomStatus, 20000)
+              
 });
