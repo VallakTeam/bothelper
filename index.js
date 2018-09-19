@@ -41,7 +41,7 @@ music.on('message', async message => {
 music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
-  music.user.setUsername('Loyal Music')
+music.user.setActivity('Gunakan >play')
     console.log(`Logged in as : ${music.user.tag}`);
     console.log(`${music.user.username} is ready!`)
               
