@@ -1,4 +1,6 @@
 dependencies:
+  canvas: 1.6.12
+  canvas-constructor: 1.1.2
   discord.js: 11.4.2
   express: 4.16.3
   ffmpeg: 0.0.4
@@ -146,6 +148,21 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-0ygVQE1olpn4Wk6k+odV3ROpYEg=
+  /canvas-constructor/1.1.2:
+    dev: false
+    peerDependencies:
+      canvas: 'github:Automattic/node-canvas'
+    resolution:
+      integrity: sha512-KNkdUmDvl1pJC/5rGRhhOAqmgZgD/4b8Z3u8ihNCXCFWZA4O8tNbXOMzvhH+TrteKUPBEQk5gWR/bhTH+WSz2g==
+  /canvas/1.6.12:
+    dependencies:
+      nan: 2.11.0
+    dev: false
+    engines:
+      node: '>=0.8.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-ssgSavCsdemQYCx2ytzl/KZnFthdMm7OhJw2D8DWiyoSrl5WpY4ghJ/zTghs+4Ck08WFaLqwWUKFdjRO9CJyRg==
   /caseless/0.12.0:
     dev: false
     resolution:
@@ -695,6 +712,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-bAdJv7fBLhWC+/Bls0Oza+mvTaNQtP+1RyhhhvD95pgUJz6XM5IzgmxOkItJ9tkoCiplvAnXI1tNmmUD/eScyA==
+  /nan/2.11.0:
+    dev: false
+    resolution:
+      integrity: sha512-F4miItu2rGnV2ySkXOQoA8FKz/SR2Q2sWP0sbTxNxz/tuokeC8WxOhPMcwi0qIyGtVn/rrSeLbvVkznqCdwYnw==
   /negotiator/0.6.1:
     dev: false
     engines:
@@ -1240,6 +1261,8 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  canvas: ^1.6.12
+  canvas-constructor: ^1.0.1
   discord.js: ^11.3.2
   express: 4.16.3
   ffmpeg: 0.0.4
