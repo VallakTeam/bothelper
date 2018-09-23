@@ -19,7 +19,7 @@ setInterval(() => {
 
 music.on('message', async message => {
 
-    let prefix = 'g1';
+    let prefix = 'gwel';
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
@@ -41,7 +41,7 @@ music.on('message', async message => {
 music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
-music.user.setActivity('Gunakan >play')
+music.user.setActivity('WELCOMER GOOD GAME!!')
     console.log(`Logged in as : ${music.user.tag}`);
     console.log(`${music.user.username} is ready!`)
               
