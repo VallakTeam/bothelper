@@ -44,6 +44,7 @@ music.on('message', async message => {
     }
 });
 
+
 music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
@@ -52,6 +53,14 @@ music.user.setActivity('WELCOMER GOOD GAME!!')
     console.log(`${music.user.username} is ready!`)
               
 });
+music.on('message', async (simi2)  => {
+
+    var simikm3 = "http";
+if(simi2.content.toLowerCase().includes(simikm3)) {
+   simi2.delete(2000)
+         simi2.reply(`**G2 BOT:** \`Jangan share-link disini ada tempatnya :(\``).then(msg => {msg.delete(5000)});
+}
+})
 
 music.on("guildMemberAdd", async member => {
             var namam = member.user.username
@@ -82,3 +91,4 @@ Isi biodatanya ya biar saling kenal <#493044916801503233> semoga betah**💕
     name: 'By Loyal.jpg'
   }] })
 });
+
