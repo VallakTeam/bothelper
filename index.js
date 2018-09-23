@@ -55,10 +55,10 @@ music.user.setActivity('WELCOMER GOOD GAME!!')
 });
 music.on('message', async (simi2)  => {
 
-    var simikm3 = "http";
+    var simikm3 = "discord.gg";
 if(simi2.content.toLowerCase().includes(simikm3)) {
    simi2.delete(2000)
-         simi2.reply(`**G2 BOT:** \`Jangan share-link disini ada tempatnya :(\``).then(msg => {msg.delete(5000)});
+         simi2.reply(`**G2 BOT:** \`Bukan Tempat sharelink dan bukan pasar sayang 👿\``).then(msg => {msg.delete(5000)});
 }
 })
 
