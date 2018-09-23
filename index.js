@@ -72,9 +72,9 @@ music.on("guildMemberAdd", async member => {
               .toBufferAsync();
             }
     let channel = member.guild.channels.get(`493031211321655297`);
-  channel.send(`💞 **Selamat Datang** ${member.user} **Jangan lupa untuk melihat <#493044741798363136> terlebih dahulu. Isi biodatanya ya biar saling kenal <#493044916801503233> semoga betah**💕`,{
+  channel.send(`💞 **Selamat Datang** ${member.user} **Jangan lupa untuk melihat <#493044741798363136> terlebih dahulu. Isi biodatanya ya biar saling kenal <#493044916801503233> semoga betah**💕 Instagram: https://instagram.com/g2_goodgame whattsap: https://chat.whatsapp.com/6x2OocGiR0oJndDKnm43uK`,{
   files: [{
     attachment: await createCanvas(),
-    name: 'MyID Welcome.jpg'
+    name: 'By Loyal.jpg'
   }] })
 });
