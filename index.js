@@ -54,33 +54,3 @@ music.user.setActivity('http://discord.gg/diserver')
               
 });
 
-music.on("guildMemberAdd", async member => {
-            var namam = member.user.username
-            var jadim = namam.length > 12 ? namam.substring(0, 10) + "..." : namam;
-            async function createCanvas() {
-            var imageUrlRegex = /\?size=2048$/g;
-
-            var {body: background} = await superagent.get(`https://media.discordapp.net/attachments/493036900664344576/493337183499976705/Screenshot_33.png`);
-            var {body: avatar} = await superagent.get(member.user.displayAvatarURL.replace(imageUrlRegex, "?size=128"));
-
-            return new Canvas(856, 376)
-              .addImage(avatar, 100, 50, 256, 256, 128)
-      .setColor('#11c40f')
-              .setTextAlign('left')
-              .setTextFont('bold 30px Arial')
-              .addImage(background, 0, 0, 856, 376)
-              .addText(`${jadim}`, 295, 88)
-              .addImage(avatar, 40, 63, 164, 140)
-              .toBufferAsync();
-            }
-    let channel = member.guild.channels.get(`493031211321655297`);
-  channel.send(`💞 **Selamat Datang** ${member.user} **Jangan lupa untuk melihat <#493044741798363136> terlebih dahulu. 
-Isi biodatanya ya biar saling kenal <#493044916801503233> semoga betah**💕 
-**Instagram:** https://instagram.com/g2_goodgame 
-**whattsap:** https://chat.whatsapp.com/6x2OocGiR0oJndDKnm43uK`,{
-  files: [{
-    attachment: await createCanvas(),
-    name: 'By Loyal.jpg'
-  }] })
-});
-
