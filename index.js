@@ -53,14 +53,6 @@ music.user.setActivity('http://discord.gg/diserver')
     console.log(`${music.user.username} is ready!`)
               
 });
-music.on('message', async (simi2)  => {
-
-    var simikm3 = "discord.gg";
-if(simi2.content.toLowerCase().includes(simikm3)) {
-   simi2.delete(2000)
-         simi2.reply(`**G2 BOT:** \`Bukan Tempat sharelink dan bukan pasar sayang 👿\``).then(msg => {msg.delete(5000)});
-}
-})
 
 music.on("guildMemberAdd", async member => {
             var namam = member.user.username
