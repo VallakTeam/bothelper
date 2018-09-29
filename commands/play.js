@@ -16,7 +16,7 @@ exports.run = async(music, message, args, color, queue) => {
   const serverQueue = queue.get(message.guild.id);
 
 const voiceChannel = message.member.voiceChannel;
-if (! voiceChannel) return message.channel.send ('I \' m maaf tetapi Anda harus berada di saluran suara untuk memutar musik! ');
+if (! voiceChannel) return message.channel.send ('maaf tetapi Anda harus berada di saluran suara untuk memutar musik! ');
      const permissions = voiceChannel.permissionsFor (music.user);
      if (! permissions.has ('CONNECT')) {
        return message.channel.send ('Saya tidak dapat terhubung ke saluran suara Anda, pastikan saya memiliki izin yang tepat!');
@@ -121,7 +121,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
     if (playlist) return undefined;
-    else return message.channel.send(`:rocket: **${song.title}** has been added to the queue!`);
+    else return message.channel.send(`<a:s:491647758558560276> **${song.title}** Ditambahkan ke antrian.!`);
   }
   return undefined;
 }
