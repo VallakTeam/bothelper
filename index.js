@@ -25,7 +25,7 @@ setInterval(() => {
 
 music.on('message', async message => {
 
-    let prefix = '>';
+    let prefix = 'mvp?';
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
@@ -48,6 +48,7 @@ music.on('message', async message => {
 music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
+  music.user.setActivity('www.vertershop.us')
     console.log(`Logged in as : ${music.user.tag}`);
     console.log(`${music.user.username} is ready!`)
               

@@ -48,7 +48,6 @@ if (! voiceChannel) return message.channel.send ('maaf tetapi Anda harus berada 
 .setColor("RANDOM")
           .setFooter("Harap berikan nilai untuk memilih salah satu hasil pencarian mulai dari 1-10.")
           
-          message.react("🇮🇩")
           let msgtoDelete = await message.channel.send({embed: embed});
           // eslint-disable-next-line max-depth
           try {
