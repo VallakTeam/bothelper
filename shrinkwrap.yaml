@@ -977,7 +977,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tQtKA9WIAhBF3+VLAseyMqZeBjW0AHJoxOtYqSUZNJxauErmLbVm2FW1y+J/YA9dUrAC39ITejlZWhVIwawkKw==
-      tarball: 'http://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz'
   /ref-struct/1.1.0:
     dependencies:
       debug: 2.6.9
