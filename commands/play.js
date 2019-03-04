@@ -16,14 +16,14 @@ exports.run = async(music, message, args, color, queue) => {
   const serverQueue = queue.get(message.guild.id);
 
 const voiceChannel = message.member.voiceChannel;
-if (! voiceChannel) return message.channel.send ('maaf tetapi Anda harus berada di saluran suara untuk memutar musik! ');
-     const permissions = voiceChannel.permissionsFor (music.user);
-     if (! permissions.has ('CONNECT')) {
-       return message.channel.send ('Saya tidak dapat terhubung ke saluran suara Anda, pastikan saya memiliki izin yang tepat!');
-     }
-     if (! permissions.has ('SPEAK')) {
-       return message.channel.send ('Saya tidak dapat berbicara di saluran suara ini, pastikan saya memiliki izin yang tepat!');
-     }
+    if (!voiceChannel) return message.channel.send('Maaf, Anda harus berada di saluran suara untuk memutar musik!');
+    const permissions = voiceChannel.permissionsFor(music.user);
+    if (!permissions.has('CONNECT')) {
+      return message.channel.send('Saya tidak dapat terhubung ke saluran suara Anda, pastikan saya memiliki izin yang tepat!');
+    } 
+    if (!permissions.has('SPEAK')) {
+      return message.channel.send('Saya tidak dapat berbicara di saluran suara ini, pastikan saya memiliki izin yang tepat!');
+    }
 
     if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
       const playlist = await youtube.getPlaylist(url);
@@ -43,11 +43,12 @@ if (! voiceChannel) return message.channel.send ('maaf tetapi Anda harus berada 
           
           
           const embed = new Discord.RichEmbed()
-          .setTitle(":flag_id:  Pilih music yang kamu mau :musical_note: ")
-          .setDescription(`${videos.map(video2 => `**[${++index}]** \`${video2.title}\` `).join('\n')}`)
-.setColor("RANDOM")
-          .setFooter("Harap berikan nilai untuk memilih salah satu hasil pencarian mulai dari 1-10.")
+          .setTitle("🚀 Pemilihan Lagu 🚀")
+          .setDescription(`${videos.map(video2 => `**「${++index}」** \`${video2.title}\` `).join('\n')}`)
+.setColor("#000000")
+          .setFooter("► Berikan nilai untuk memilih salah satu hasil pencarian mulai dari 1-10. ◀")
           
+          message.react("🆗")
           let msgtoDelete = await message.channel.send({embed: embed});
           // eslint-disable-next-line max-depth
           try {
@@ -60,8 +61,8 @@ if (! voiceChannel) return message.channel.send ('maaf tetapi Anda harus berada 
           } catch (err) {
             console.error(err);
             const noPick = new Discord.RichEmbed()
-            .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pemilihan video.")
-.setColor("RANDOM")
+            .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pilihan video.")
+.setColor("#000000")
             message.channel.send({embed: noPick});
             msgtoDelete.delete()
             return;
@@ -70,7 +71,7 @@ if (! voiceChannel) return message.channel.send ('maaf tetapi Anda harus berada 
           var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
         } catch (err) {
           console.error(err);
-          return message.channel.send('🆘 I could not obtain any search results.');
+          return message.channel.send('🆘 Saya tidak dapat memperoleh hasil pencarian apa pun.');
         } 
       }
       return handleVideo(video, message, voiceChannel);
@@ -100,8 +101,9 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
       connection: null,
       skippers: [],
       songs: [],
-      volume: 50,
-      playing: true
+      volume: 100,
+      playing: true,
+      loop: false
     };
     queue.set(message.guild.id, queueConstruct);
 
@@ -120,7 +122,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
     if (playlist) return undefined;
-    else return message.channel.send(`<a:s:491647758558560276> **${song.title}** Ditambahkan ke antrian.!`);
+    else return message.channel.send(`:rocket: **${song.title}** has been added to the queue!`);
   }
   return undefined;
 }
@@ -142,10 +144,10 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
             serverQueue.songs.shift();
             setTimeout(() => {
                 play(guild, serverQueue.songs[0]);
-            }, 50);
+            }, 100);
         })
         .on('error', error => console.error(error));
-    dispatcher.setVolumeLogarithmic(serverQueue.volume / 50);
+    dispatcher.setVolumeLogarithmic(serverQueue.volume / 100);
 
     //Modified playing messages that give you the song duration!
 
@@ -161,12 +163,16 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
     if(secondslength == 1 || secondslength == 0) {
       if(mlength !== 1 || mlength !== 0) {
         const embed2 = new Discord.RichEmbed()
-        .setDescription(`**Memutar Music:**\n[${song.title}](${song.url})`)
-         .addField("Pengunggah 🎬", `[${song.uploadedby}](${song.channelurl})`, true)
+        .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
+         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("Voice Channel 🎧", `${song.channels}`, true)
+         .addField("📢 | Saluran Suara", `${song.channels}`, true)
+         .addField("⏲ | Durasi", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
-.setColor("RANDOM");
+        
+
+.setColor("#000000");
 
       return serverQueue.textChannel.send(embed2);
     }}};
@@ -174,12 +180,16 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
       if(mlength == 1 || mlength == 0) {
         if(secondslength !== 1 || secondslength !== 0) {
           const embed3 = new Discord.RichEmbed()
-        .setDescription(`**Memutar Music:**\n[${song.title}](${song.url})`)
-         .addField("Pengunggah 🎬", `[${song.uploadedby}](${song.channelurl})`, true)
+        .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
+         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("Voice Channel 🎧", `${song.channels}`, true)
+         .addField("📢 | Saluran Suara", `${song.channels}`, true)
+         .addField("⏲ | Durasi", `${song.durationh}:0${song.durationm}:${durations}`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
-.setColor("RANDOM");
+
+
+.setColor("#000000");
 
         return serverQueue.textChannel.send(embed3);
     }}}
@@ -187,57 +197,74 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
       if(mlength !== 1 || mlength !== 0) {
         if(secondslength !== 1 || secondslength !== 0) {
           const embed4 = new Discord.RichEmbed()
-        .setDescription(`**Memutar Music:**\n[${song.title}](${song.url})`)
-         .addField("Pengunggah 🎬", `[${song.uploadedby}](${song.channelurl})`, true)
+        .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
+         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("Voice Channel 🎧", `${song.channels}`, true)
+         .addField("📢 | Saluran Suara", `${song.channels}`, true)
+         .addField("⏲ | Durasi", `${song.durationh}:${song.durationm}:${durations}`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
-.setColor("RANDOM");
+
+
+.setColor("#000000");
 
         return serverQueue.textChannel.send(embed4);
     }}}
     if(song.durationh == 0 && song.durationm !== 0) {
       if(secondslength == 1 || secondslength == 0) {
           const embed5 = new Discord.RichEmbed()
-        .setDescription(`**Memutar Music:**\n[${song.title}](${song.url})`)
-         .addField("Pengunggah 🎬", `[${song.uploadedby}](${song.channelurl})`, true)
+        .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
+         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("Voice Channel 🎧", `${song.channels}`, true)
+         .addField("📢 | Saluran Suara", `${song.channels}`, true)
+         .addField("⏲ | Durasi", `${song.durationm}:0${durations}`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
-.setColor("RANDOM");
+
+
+.setColor("#000000");
 
         return serverQueue.textChannel.send(embed5);
     }}
     if(song.durationh == 0 && song.durationm !== 0) {
       if(secondslength !== 1 || secondslength !== 0) {
         const embed6 = new Discord.RichEmbed()
-        .setDescription(`**Memutar Music:**\n[${song.title}](${song.url})`)
-         .addField("Pengunggah 🎬", `[${song.uploadedby}](${song.channelurl})`, true)
+        .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
+         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("Voice Channel 🎧", `${song.channels}`, true)
+         .addField("📢 | Saluran Suara", `${song.channels}`, true)
+         .addField("⏲ | Durasi", `0${song.durationm}:${durations}`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
-.setColor("RANDOM");
+
+.setColor("#000000");
 
         return serverQueue.textChannel.send(embed6);
     }}
     if(song.durationh == 0 && song.durationm == 0 && song.durations !== 0) {
         const embed7 = new Discord.RichEmbed()
-        .setDescription(`**Memutar Music:**\n[${song.title}](${song.url})`)
-         .addField("Pengunggah 🎬", `[${song.uploadedby}](${song.channelurl})`, true)
+        .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
+         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("Voice Channel 🎧", `${song.channels}`, true)
+         .addField("📢 | Saluran Suara", `${song.channels}`, true)
+         .addField("⏲ | Durasi", `${durations} Detik`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
-.setColor("RANDOM");
+
+.setColor("#000000");
 
       return serverQueue.textChannel.send(embed7);
     } else {
         const embed8 = new Discord.RichEmbed()
-        .setDescription(`**Memutar Music:**\n[${song.title}](${song.url})`)
-         .addField("Pengunggah 🎬", `[${song.uploadedby}](${song.channelurl})`, true)
+        .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
+         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("Voice Channel 🎧", `${song.channels}`, true)
+         .addField("📢 | Saluran Suara", `${song.channels}`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
-.setColor("RANDOM");
+
+
+.setColor("#000000");
 
       return serverQueue.textChannel.send(embed8);
     }
