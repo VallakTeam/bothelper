@@ -45,7 +45,7 @@ const voiceChannel = message.member.voiceChannel;
           const embed = new Discord.RichEmbed()
           .setTitle("🚀 Pemilihan Lagu 🚀")
           .setDescription(`${videos.map(video2 => `**「${++index}」** \`${video2.title}\` `).join('\n')}`)
-.setColor("#000000")
+.setColor("#ff0000")
           .setFooter("► Berikan nilai untuk memilih salah satu hasil pencarian mulai dari 1-10. ◀")
           
           message.react("🆗")
@@ -62,7 +62,7 @@ const voiceChannel = message.member.voiceChannel;
             console.error(err);
             const noPick = new Discord.RichEmbed()
             .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pilihan video.")
-.setColor("#000000")
+.setColor("#ff0000")
             message.channel.send({embed: noPick});
             msgtoDelete.delete()
             return;
@@ -172,7 +172,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
         
 
-.setColor("#000000");
+.setColor("#ff0000");
 
       return serverQueue.textChannel.send(embed2);
     }}};
@@ -189,7 +189,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#000000");
+.setColor("#ff0000");
 
         return serverQueue.textChannel.send(embed3);
     }}}
@@ -206,7 +206,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#000000");
+.setColor("#ff0000");
 
         return serverQueue.textChannel.send(embed4);
     }}}
@@ -222,7 +222,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#000000");
+.setColor("#ff0000");
 
         return serverQueue.textChannel.send(embed5);
     }}
@@ -237,7 +237,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
          .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
 
-.setColor("#000000");
+.setColor("#ff0000");
 
         return serverQueue.textChannel.send(embed6);
     }}
@@ -251,7 +251,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
          .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
 
 
-.setColor("#000000");
+.setColor("#ff0000");
 
       return serverQueue.textChannel.send(embed7);
     } else {
@@ -264,7 +264,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#000000");
+.setColor("#ff0000");
 
       return serverQueue.textChannel.send(embed8);
     }
