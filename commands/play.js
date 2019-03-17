@@ -45,7 +45,7 @@ const voiceChannel = message.member.voiceChannel;
           const embed = new Discord.RichEmbed()
           .setTitle("🚀 Pemilihan Lagu 🚀")
           .setDescription(`${videos.map(video2 => `**「${++index}」** \`${video2.title}\` `).join('\n')}`)
-.setColor("#ff0000")
+.setColor("#00f2fd")
           .setFooter("► Berikan nilai untuk memilih salah satu hasil pencarian mulai dari 1-10. ◀")
           
           message.react("🆗")
@@ -62,7 +62,7 @@ const voiceChannel = message.member.voiceChannel;
             console.error(err);
             const noPick = new Discord.RichEmbed()
             .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pilihan video.")
-.setColor("#ff0000")
+.setColor("#00f2fd")
             message.channel.send({embed: noPick});
             msgtoDelete.delete()
             return;
@@ -168,11 +168,11 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("📢 | Saluran Suara", `${song.channels}`, true)
          .addField("⏲ | Durasi", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
         
 
-.setColor("#ff0000");
+.setColor("#00f2fd");
 
       return serverQueue.textChannel.send(embed2);
     }}};
@@ -185,11 +185,11 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("📢 | Saluran Suara", `${song.channels}`, true)
          .addField("⏲ | Durasi", `${song.durationh}:0${song.durationm}:${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
 
 
-.setColor("#ff0000");
+.setColor("#00f2fd");
 
         return serverQueue.textChannel.send(embed3);
     }}}
@@ -202,11 +202,11 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("📢 | Saluran Suara", `${song.channels}`, true)
          .addField("⏲ | Durasi", `${song.durationh}:${song.durationm}:${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
 
 
-.setColor("#ff0000");
+.setColor("#00f2fd");
 
         return serverQueue.textChannel.send(embed4);
     }}}
@@ -218,11 +218,11 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("📢 | Saluran Suara", `${song.channels}`, true)
          .addField("⏲ | Durasi", `${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
 
 
-.setColor("#ff0000");
+.setColor("#00f2fd");
 
         return serverQueue.textChannel.send(embed5);
     }}
@@ -234,10 +234,10 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("📢 | Saluran Suara", `${song.channels}`, true)
          .addField("⏲ | Durasi", `0${song.durationm}:${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
 
-.setColor("#ff0000");
+.setColor("#00f2fd");
 
         return serverQueue.textChannel.send(embed6);
     }}
@@ -248,10 +248,10 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("📢 | Saluran Suara", `${song.channels}`, true)
          .addField("⏲ | Durasi", `${durations} Detik`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
 
-.setColor("#ff0000");
+.setColor("#00f2fd");
 
       return serverQueue.textChannel.send(embed7);
     } else {
@@ -260,11 +260,11 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
          .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("📢 | Saluran Suara", `${song.channels}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/ywa6QBC)`, true)
+         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
 
 
-.setColor("#ff0000");
+.setColor("#00f2fd");
 
       return serverQueue.textChannel.send(embed8);
     }

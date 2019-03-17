@@ -17,7 +17,7 @@ exports.run = async(music, message, args, color, queue) => {
 
     if (!serverQueue) return message.channel.send("There isn't anything playing");
     let embed = new Discord.RichEmbed()
-    .setColor(color)
+    .setColor(`#00f2fd`)
     .setDescription(`:notes: Currently Playing: **${serverQueue.songs[0].title}**`);
     message.channel.send(embed);
  

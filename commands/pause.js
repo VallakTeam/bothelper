@@ -20,7 +20,7 @@ if (serverQueue && serverQueue.playing) {
 			serverQueue.connection.dispatcher.pause();
       let embed = new Discord.RichEmbed()
       .setDescription('⏸ Paused the music for you!')
-      .setColor(color)
+      .setColor(`#00f2fd`)
 			return message.channel.send(embed);
 		}
 		return message.channel.send('There is nothing playing.');
