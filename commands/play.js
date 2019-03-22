@@ -43,7 +43,7 @@ const voiceChannel = message.member.voiceChannel;
           
           
           const embed = new Discord.RichEmbed()
-          .setTitle("🚀 Pemilihan Lagu 🚀")
+          .setTitle("👁 Pemilihan Lagu 👁")
           .setDescription(`${videos.map(video2 => `**「${++index}」** \`${video2.title}\` `).join('\n')}`)
 .setColor("#00f2fd")
           .setFooter("► Berikan nilai untuk memilih salah satu hasil pencarian mulai dari 1-10. ◀")
@@ -62,7 +62,7 @@ const voiceChannel = message.member.voiceChannel;
             console.error(err);
             const noPick = new Discord.RichEmbed()
             .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pilihan video.")
-.setColor("#00f2fd")
+.setColor("#0aaaeb")
             message.channel.send({embed: noPick});
             msgtoDelete.delete()
             return;
@@ -119,10 +119,13 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
       return message.channel.send(`I could not join the voice channel: ${error}`);
     }
   } else {
+            const noPick1 = new Discord.RichEmbed()
+     .setDescription(`🦜 **${song.title}** has been added to the queue!`)
+     .setColor("#0aaaeb")
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
     if (playlist) return undefined;
-    else return message.channel.send(`:rocket: **${song.title}** has been added to the queue!`);
+    else return message.channel.send({embed: noPick1});
   }
   return undefined;
 }
