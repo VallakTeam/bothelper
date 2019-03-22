@@ -45,7 +45,7 @@ const voiceChannel = message.member.voiceChannel;
           const embed = new Discord.RichEmbed()
           .setTitle("👁 Pemilihan Lagu 👁")
           .setDescription(`${videos.map(video2 => `**「${++index}」** \`${video2.title}\` `).join('\n')}`)
-.setColor("#00f2fd")
+.setColor("#0aaaeb")
           .setFooter("► Berikan nilai untuk memilih salah satu hasil pencarian mulai dari 1-10. ◀")
           
           message.react("🆗")
@@ -175,7 +175,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
         
 
-.setColor("#00f2fd");
+.setColor("#0aaaeb");
 
       return serverQueue.textChannel.send(embed2);
     }}};
@@ -192,7 +192,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#00f2fd");
+.setColor("#0aaaeb");
 
         return serverQueue.textChannel.send(embed3);
     }}}
@@ -209,7 +209,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#00f2fd");
+.setColor("#0aaaeb");
 
         return serverQueue.textChannel.send(embed4);
     }}}
@@ -225,7 +225,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#00f2fd");
+.setColor("#0aaaeb");
 
         return serverQueue.textChannel.send(embed5);
     }}
@@ -240,7 +240,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
          .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
 
-.setColor("#00f2fd");
+.setColor("#0aaaeb");
 
         return serverQueue.textChannel.send(embed6);
     }}
@@ -254,7 +254,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
          .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
 
 
-.setColor("#00f2fd");
+.setColor("#0aaaeb");
 
       return serverQueue.textChannel.send(embed7);
     } else {
@@ -267,7 +267,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#00f2fd");
+.setColor("#0aaaeb");
 
       return serverQueue.textChannel.send(embed8);
     }

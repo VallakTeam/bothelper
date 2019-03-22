@@ -24,7 +24,7 @@ exports.run = async(music, message, args, color, queue) => {
         
         let vEmbed = new Discord.RichEmbed()
         .setDescription(`I set the volume to: **${args1[1]}**`)
-.setColor("#00f2fd");
+.setColor("#0aaaeb");
         
         message.channel.send(vEmbed);
         
