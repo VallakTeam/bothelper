@@ -4,7 +4,7 @@ exports.run = async(music, message, args, color, queue) => {
 const serverQueue = queue.get(message.guild.id);  
   const loop = new Discord.RichEmbed()
   .setDescription("🔁 **Enable**")
-  .setColor("#0aaaeb")
+  .setColor("#00000")
   const unloop = new Discord.RichEmbed()
   .setDescription("🔁 **Disable**")
   .setColor("#0aaaeb")
