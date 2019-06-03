@@ -41,17 +41,6 @@ const voiceChannel = message.member.voiceChannel;
           var videos = await youtube.searchVideos(searchString, 10);
           let index = 0;
           
-          
-          const embed = new Discord.RichEmbed()
-          .setTitle("👁 Pemilihan Lagu 👁")
-          .setDescription(`${videos.map(video2 => `**「${++index}」** \`${video2.title}\` `).join('\n')}`)
-.setColor("#0e123a")
-          .setFooter("► Berikan nilai untuk memilih salah satu hasil pencarian mulai dari 1-10. ◀")
-          
-          message.react("🆗")
-          let msgtoDelete = await message.channel.send({embed: embed});
-          // eslint-disable-next-line max-depth
-
           const videoIndex = parseInt(1);
           var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
         } catch (err) {
@@ -105,7 +94,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
     }
   } else {
             const noPick1 = new Discord.RichEmbed()
-     .setDescription(`🦜 **${song.title}** has been added to the queue!`)
+     .setDescription(`🦜 **${song.title}** \nhas been added to the queue!`)
      .setColor("#0e123a")
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
