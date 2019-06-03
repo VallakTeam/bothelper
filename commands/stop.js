@@ -22,7 +22,7 @@ exports.run = async(music, message, args, color,  queue) => {
     message.channel.send({embed: new Discord.RichEmbed()
                     .setAuthor(message.author.tag,message.author.avatarURL)
                     .setDescription(`${message.author} telah memberhentikan musik.`)
-.setColor("#0aaaeb")
+.setColor("#0e123a")
                    })
     return undefined; 
 
