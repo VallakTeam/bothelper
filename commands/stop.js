@@ -21,7 +21,7 @@ exports.run = async(music, message, args, color,  queue) => {
     serverQueue.connection.dispatcher.end('Stop command has been used!');
     message.channel.send({embed: new Discord.RichEmbed()
                     .setAuthor(message.author.tag,message.author.avatarURL)
-                    .setDescription(`${message.author} telah memberhentikan musik.`)
+                    .setDescription(`📴 ${message.author} has stopped the music.`)
 .setColor("#0e123a")
                    })
     return undefined; 

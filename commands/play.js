@@ -94,7 +94,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
     }
   } else {
             const noPick1 = new Discord.RichEmbed()
-     .setDescription(`🦜 **${song.title}** \nhas been added to the queue!`)
+     .setDescription(`🦜 **${song.title}** \n🔔 has been added to the queue!`)
      .setColor("#0e123a")
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
@@ -141,11 +141,13 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
       if(mlength !== 1 || mlength !== 0) {
         const embed2 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField("💽 | Uploaded", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Saluran Suara", `${song.channels}`, true)
-         .addField("⏲ | Durasi", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("📢 | Voice Channels", `${song.channels}`, true)
+         .addField("⏲ | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+        .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
+
 
         
 
@@ -158,11 +160,12 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         if(secondslength !== 1 || secondslength !== 0) {
           const embed3 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField("💽 | Uploaded", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Saluran Suara", `${song.channels}`, true)
-         .addField("⏲ | Durasi", `${song.durationh}:0${song.durationm}:${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("📢 | Voice Channels", `${song.channels}`, true)
+         .addField("⏲ | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+        .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
 
@@ -175,11 +178,13 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         if(secondslength !== 1 || secondslength !== 0) {
           const embed4 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField("💽 | Uploaded", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Saluran Suara", `${song.channels}`, true)
-         .addField("⏲ | Durasi", `${song.durationh}:${song.durationm}:${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("📢 | Voice Channels", `${song.channels}`, true)
+         .addField("⏲ | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+        .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
+
 
 
 
@@ -191,11 +196,13 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
       if(secondslength == 1 || secondslength == 0) {
           const embed5 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField("💽 | Uploaded", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Saluran Suara", `${song.channels}`, true)
-         .addField("⏲ | Durasi", `${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("📢 | Voice Channels", `${song.channels}`, true)
+         .addField("⏲ | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+        .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
+
 
 
 
@@ -207,11 +214,13 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
       if(secondslength !== 1 || secondslength !== 0) {
         const embed6 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField("💽 | Uploaded", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Saluran Suara", `${song.channels}`, true)
-         .addField("⏲ | Durasi", `0${song.durationm}:${durations}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("📢 | Voice Channels", `${song.channels}`, true)
+         .addField("⏲ | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+        .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
+
 
 
 .setColor("#0e123a");
@@ -221,11 +230,12 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
     if(song.durationh == 0 && song.durationm == 0 && song.durations !== 0) {
         const embed7 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField("💽 | Uploaded", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Saluran Suara", `${song.channels}`, true)
-         .addField("⏲ | Durasi", `${durations} Detik`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("📢 | Voice Channels", `${song.channels}`, true)
+         .addField("⏲ | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+        .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
 .setColor("#0e123a");
@@ -234,10 +244,11 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
     } else {
         const embed8 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField("💽 | Diunggah", `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField("💽 | Uploaded", `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Saluran Suara", `${song.channels}`, true)
-         .addField("🙌 | Server Dukungan", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("📢 | Voice Channels", `${song.channels}`, true)
+         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+        .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
 
