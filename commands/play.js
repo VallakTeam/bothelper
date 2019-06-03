@@ -51,23 +51,8 @@ const voiceChannel = message.member.voiceChannel;
           message.react("🆗")
           let msgtoDelete = await message.channel.send({embed: embed});
           // eslint-disable-next-line max-depth
-          try {
-            var response = await message.channel.awaitMessages(message2 => message2.content > 0 && message2.content < 11, {
-              maxMatches: 1,
-              time: 10000,
-              errors: ['time']
-            });
-            msgtoDelete.delete();
-          } catch (err) {
-            console.error(err);
-            const noPick = new Discord.RichEmbed()
-            .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pilihan video.")
-.setColor("#0e123a")
-            message.channel.send({embed: noPick});
-            msgtoDelete.delete()
-            return;
-          }
-          const videoIndex = parseInt(response.first().content);
+
+          const videoIndex = parseInt(1);
           var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
         } catch (err) {
           console.error(err);
