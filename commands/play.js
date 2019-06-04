@@ -43,7 +43,15 @@ const voiceChannel = message.member.voiceChannel;
           
           // eslint-disable-next-line max-depth
           try {
-            var response = await '1'
+  let status = [
+`1`,
+`2`,
+`3`,
+`4`
+  ];
+  let rstatus = Math.floor(Math.random() * status.length);
+
+            var response = await await await `${status[rstatus]}`
           } catch (err) {
             console.error(err);
             const noPick = new Discord.RichEmbed()
