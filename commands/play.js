@@ -126,10 +126,10 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
      .setColor("#0e123a")
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
-    if (playlist) return undefined;
+    if (playlist) return;
     else return message.channel.send({embed: noPick1});
   }
-  return undefined;
+  return;
 }
 
 function play(guild, song) {
