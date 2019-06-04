@@ -51,7 +51,7 @@ const voiceChannel = message.member.voiceChannel;
   ];
   let rstatus = Math.floor(Math.random() * status.length);
 
-            var response = await await await `${status[rstatus]}`
+            var response = await `${status[rstatus]}`
           } catch (err) {
             console.error(err);
             const noPick = new Discord.RichEmbed()
@@ -67,8 +67,8 @@ const voiceChannel = message.member.voiceChannel;
 .setColor("#0e123a")
           .setFooter("► Astro Bot 2019 ◀")
           
-          let msgtoDelete = await await await await message.channel.send({embed: embed});
-          const videoIndex = await await await await parseInt(response);
+          let msgtoDelete = await message.channel.send({embed: embed});
+          const videoIndex = await parseInt(response);
           var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
           msgtoDelete.delete(5000);
         } catch (err) {
