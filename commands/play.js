@@ -41,15 +41,6 @@ const voiceChannel = message.member.voiceChannel;
           var videos = await youtube.searchVideos(searchString, 10);
           let index = 0;
           
-          
-          const embed = new Discord.RichEmbed()
-          .setTitle("🔍 Mencari lagu Terbaik")
-          .setDescription(`**Mencari lagu yang di tersimpan di **ASTRO**`)
-.setColor("#0e123a")
-          .setFooter("► Astro Bot 2019 ◀")
-          
-          message.react("🆗")
-          let msgtoDelete = await message.channel.send({embed: embed});
           // eslint-disable-next-line max-depth
           try {
             var response = await '1'
@@ -59,11 +50,19 @@ const voiceChannel = message.member.voiceChannel;
             .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pilihan video.")
 .setColor("#0e123a")
             message.channel.send({embed: noPick});
-            msgtoDelete.delete()
             return;
           }
+          const embed = new Discord.RichEmbed()
+          .setTitle("🔍 Mencari lagu Terbaik")
+          .setDescription(`\`\`\`ini
+[Mencari lagu yang tersimpan di ASTRO]\`\`\``)
+.setColor("#0e123a")
+          .setFooter("► Astro Bot 2019 ◀")
+          
+          let msgtoDelete = await await await await message.channel.send({embed: embed});
           const videoIndex = parseInt(response);
           var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
+          msgtoDelete.delete(5000);
         } catch (err) {
           console.error(err);
           return message.channel.send('🆘 Saya tidak dapat memperoleh hasil pencarian apa pun.');
@@ -174,7 +173,8 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 .setColor("#0e123a");
 
-      return serverQueue.textChannel.send(embed2);
+
+      return  serverQueue.textChannel.send(embed2);
     }}};
     if(song.durationh !== 0) {
       if(mlength == 1 || mlength == 0) {
