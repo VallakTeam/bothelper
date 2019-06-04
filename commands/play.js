@@ -103,7 +103,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
       connection: null,
       skippers: [],
       songs: [],
-      volume: 100,
+      volume: 50,
       playing: true,
       loop: false
     };
@@ -149,7 +149,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
             serverQueue.songs.shift();
             setTimeout(() => {
                 play(guild, serverQueue.songs[0]);
-            }, 100);
+            }, 50);
         })
         .on('error', error => console.error(error));
     dispatcher.setVolumeLogarithmic(serverQueue.volume / 100);
