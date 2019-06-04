@@ -68,7 +68,7 @@ const voiceChannel = message.member.voiceChannel;
           .setFooter("► Astro Bot 2019 ◀")
           
           let msgtoDelete = await await await await message.channel.send({embed: embed});
-          const videoIndex = parseInt(response);
+          const videoIndex = await await await await parseInt(response);
           var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
           msgtoDelete.delete(5000);
         } catch (err) {
