@@ -25,7 +25,7 @@ setInterval(() => {
 
 music.on('message', async message => {
 
-    let prefix = '!';
+    let prefix = '>';
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
