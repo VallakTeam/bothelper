@@ -4,10 +4,6 @@ music.commands = new Discord.Collection();
 const superagent = require("superagent");
 const {color} = require('./config.json');
 const queue = new Map();
-const { Canvas } = require("canvas-constructor"); // You can't make images without this.
-const { resolve, join } = require("path"); // This is to get a font file.
-const { Attachment } = require("discord.js"); // This is to send the image via discord.
-const { get } = require("snekfetch");
 
 const http = require('http');
 const fs = require("fs");
@@ -25,7 +21,7 @@ setInterval(() => {
 
 music.on('message', async message => {
 
-    let prefix = '>';
+    let prefix = ';';
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
