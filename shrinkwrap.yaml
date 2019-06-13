@@ -10,9 +10,9 @@ dependencies:
   node-gyp: 3.8.0
   node-opus: 0.2.9
   opusscript: 0.0.6
-  simple-youtube-api: 5.0.2
+  simple-youtube-api: 5.2.0
   superagent: 3.8.3
-  ytdl-core: 0.20.4
+  ytdl-core: 0.29.2
 packages:
   /abbrev/1.1.1:
     dev: false
@@ -235,13 +235,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
-  /cross-fetch/2.2.2:
-    dependencies:
-      node-fetch: 2.1.2
-      whatwg-fetch: 2.0.4
-    dev: false
-    resolution:
-      integrity: sha1-pH/09/xxLauo9qaVoRyUhEDUVyM=
   /dashdash/1.14.1:
     dependencies:
       assert-plus: 1.0.0
@@ -613,10 +606,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
-  /iso8601-duration/1.1.1:
+  /iso8601-duration/1.2.0:
     dev: false
     resolution:
-      integrity: sha512-dE/f+GO/ptSFgsM7ccVOYb/82PdCrSAHdmFZgAKwdoUWq8NHg5ygohklQBqVoqcN+CHPwE+f+pWuu2HZPnBU/Q==
+      integrity: sha512-ErTBd++b17E8nmWII1K1uZtBgD1E8RjyvwmxlCjPHNqHMD7gmcMHOw0E8Ro/6+QT4PhHRSnnMo7bxa1vFPkwhg==
   /isstream/0.1.2:
     dev: false
     resolution:
@@ -653,14 +646,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA==
-  /m3u8stream/0.2.2:
+  /m3u8stream/0.6.2:
     dependencies:
-      miniget: 1.3.0
+      miniget: 1.5.1
+      sax: 1.2.4
     dev: false
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha512-R/xWLXBtVr0m9sPruRL4p9uO01JyHxhcQ4nhqQhVgyT802OZyVW+dn+fWHvTnbfE6YMLc65TksZZut+Mh2OVMQ==
+      integrity: sha512-WsuM2bd5pPN80xvfrB+1DZqr4M7+kJl8byi6+ZCy6cmVjEiHhmr/desN53Ngsa6Hs13kYumeVgT4wL0oIJ+v6g==
   /media-typer/0.3.0:
     dev: false
     engines:
@@ -717,12 +711,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
-  /miniget/1.3.0:
+  /miniget/1.5.1:
     dev: false
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha512-qvj5v1gbTvK6iVt1DqYrF0B9Lm6VAPNCa930TmTDQp6i1svDzzV8geu+e87XA14OBWDsWENptnP6BO9iJJOD9Q==
+      integrity: sha512-KJ3AyIVZ76QuWAq43BWjkK+jLdhxhy3s4tsdg9Je91+cIFkeOSW2VEj2lSeKw50CPu1eCCkSbiQEBKL36mpA5w==
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
@@ -766,12 +760,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
-  /node-fetch/2.1.2:
+  /node-fetch/2.6.0:
     dev: false
     engines:
       node: 4.x || >=6.0.0
     resolution:
-      integrity: sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
+      integrity: sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
   /node-gyp/3.8.0:
     dependencies:
       fstream: 1.0.11
@@ -1097,13 +1091,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
-  /simple-youtube-api/5.0.2:
+  /simple-youtube-api/5.2.0:
     dependencies:
-      cross-fetch: 2.2.2
-      iso8601-duration: 1.1.1
+      iso8601-duration: 1.2.0
+      node-fetch: 2.6.0
     dev: false
     resolution:
-      integrity: sha512-MtFToFLoX4eWNVUcqhbJ3J7SN8tBNaHRAHC4RKzSCW7cEVVZygNHa3nhCEWVINBoI1fmxjEUW7zwdlChYNuoZg==
+      integrity: sha512-fF9mas0QzgVrO0mKBK57hHjer9ABzNJwK3R2Ayl1IGKTcA1T8VWfFq7OI4WmeH1FwKx9tkEFQHN8Q9AN5MqNpA==
   /snekfetch/3.6.4:
     deprecated: use node-fetch instead
     dev: false
@@ -1275,10 +1269,6 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=
-  /whatwg-fetch/2.0.4:
-    dev: false
-    resolution:
-      integrity: sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng==
   /when/3.7.8:
     dev: false
     resolution:
@@ -1307,17 +1297,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ZGh/8kF9rrRNffkLFV4AzhvooEclrOH0xaugmqGsIfFgOE/pIz4fMc4Ef+5HSQqTEug2S9JZIWDR47duDSLfaA==
-  /ytdl-core/0.20.4:
+  /ytdl-core/0.29.2:
     dependencies:
       html-entities: 1.2.1
-      m3u8stream: 0.2.2
-      miniget: 1.3.0
+      m3u8stream: 0.6.2
+      miniget: 1.5.1
       sax: 1.2.4
     dev: false
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha512-d+jthiJxSQ6yqCeCwwMggXYOjFSOJsD7ahvAAE1sFW9nVNnsA/roz91SFH1FzaMGS7/y7AnJfhVgpE9i8uYjJQ==
+      integrity: sha512-rQTxqxF09tKGgWxVtvFfi6ga1KWcHNbUGz09yTklirhqQlsIYvaDFCEhJ0K/RlzMH12FquAAMzh+Qi35fkwbFQ==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -1332,7 +1322,7 @@ specifiers:
   moment: ^2.21.0
   node-gyp: ^3.6.2
   node-opus: ^0.2.7
-  opusscript: 0.0.6
-  simple-youtube-api: ^5.0.1
+  opusscript: ^0.0.6
+  simple-youtube-api: ^5.1.1
   superagent: ^3.8.3
-  ytdl-core: ^0.20.2
+  ytdl-core: ^0.29.2

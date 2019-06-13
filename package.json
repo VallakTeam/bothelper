@@ -22,10 +22,10 @@
     "moment": "^2.21.0",
     "node-gyp": "^3.6.2",
     "node-opus": "^0.2.7",
-    "opusscript": "0.0.6",
-    "simple-youtube-api": "^5.0.1",
-    "ytdl-core": "^0.20.2",
     "canvas": "^1.6.12",
-    "superagent": "^3.8.3"
+    "superagent": "^3.8.3",
+    "ytdl-core": "^0.29.2",
+    "simple-youtube-api": "^5.1.1",
+    "opusscript": "^0.0.6"
   }
 }
