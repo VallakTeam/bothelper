@@ -4,6 +4,7 @@ music.commands = new Discord.Collection();
 const superagent = require("superagent");
 const {color} = require('./config.json');
 const queue = new Map();
+const ytdl = require("ytdl-core");
 
 const http = require('http');
 const fs = require("fs");
@@ -38,6 +39,16 @@ music.on('message', async message => {
     } finally { 
         console.log(`${message.author.username} ran the command: ${cmd} on ${message.guild.name}`);
     }
+  if (message.content.startsWith(prefix + "radio pop")) {
+message.member.voiceChannel.join().then(connection => {  
+ console.log('Music sedang berjalan')
+  const dispatcher = connection.playStream(ytdl(`https://www.youtube.com/watch?v=rAGgWJl7Fr4`));
+  connection.dispatcher.setVolumeLogaritchmic(1);
+
+});
+message.channel.send('**📻 Radio Berhasil duputar 📻**')
+
+  }
 });
 
 
