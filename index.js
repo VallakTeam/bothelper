@@ -46,7 +46,10 @@ message.member.voiceChannel.join().then(connection => {
   connection.dispatcher.setVolumeLogaritchmic(1);
 
 });
-message.channel.send('**📻 Radio Berhasil duputar 📻**')
+let vEmbed = new Discord.RichEmbed()
+.setDescription('**📻 Radio `POP ENGLISH` Berhasil duputar 📻**')
+.setColor("#0093f3");  
+message.channel.send(vEmbed);
 
   }
 });
