@@ -43,7 +43,7 @@ music.on('message', async message => {
 message.member.voiceChannel.join().then(connection => {  
  console.log('Music sedang berjalan')
   const dispatcher = connection.playStream(ytdl(`https://www.youtube.com/watch?v=rAGgWJl7Fr4`));
-  connection.dispatcher.setVolumeLogaritchmic(1);
+  connection.dispatcher.setVolumeLogaritchmic(0.2);
 
 });
 let vEmbed = new Discord.RichEmbed()
