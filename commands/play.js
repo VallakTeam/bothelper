@@ -63,9 +63,9 @@ const voiceChannel = message.member.voiceChannel;
           const embed = new Discord.RichEmbed()
           .setTitle("🔍 Mencari lagu Terbaik")
           .setDescription(`\`\`\`ini
-[Mencari lagu yang tersimpan di DrupaL]\`\`\``)
+[Mencari lagu yang tersimpan di Digital]\`\`\``)
 .setColor("#0093f3")
-          .setFooter("► Astro Bot 2019 ◀")
+          .setFooter("► Digital Bot 2019 ◀")
           
           let msgtoDelete = await message.channel.send({embed: embed});
           const videoIndex = await parseInt(response);
