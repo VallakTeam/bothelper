@@ -42,8 +42,8 @@ music.on('message', async message => {
   if (message.content.startsWith(prefix + "radio pop")) {
 message.member.voiceChannel.join().then(connection => {  
  console.log('Music sedang berjalan')
-  const dispatcher = connection.playStream(ytdl(`https://www.youtube.com/watch?v=rAGgWJl7Fr4`));
-  connection.dispatcher.setVolumeLogaritchmic(0.2);
+  const dispatcher = connection.playStream(ytdl(`https://www.youtube.com/watch?v=taD9hqwCb1o`));
+  connection.dispatcher.setVolumeLogarithmic(0.5);
 
 });
 let vEmbed = new Discord.RichEmbed()
