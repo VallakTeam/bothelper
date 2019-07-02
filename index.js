@@ -43,11 +43,25 @@ music.on('message', async message => {
 message.member.voiceChannel.join().then(connection => {  
  console.log('Music sedang berjalan')
   const dispatcher = connection.playStream(ytdl(`https://www.youtube.com/watch?v=taD9hqwCb1o`));
-  connection.dispatcher.setVolumeLogarithmic(0.5);
+  connection.dispatcher.setVolumeLogarithmic(0.8);
 
 });
 let vEmbed = new Discord.RichEmbed()
 .setDescription('**📻 Radio `POP ENGLISH` Berhasil duputar 📻**')
+.setColor("#0093f3");  
+message.channel.send(vEmbed);
+
+  }
+
+  if (message.content.startsWith(prefix + "radio tidur")) {
+message.member.voiceChannel.join().then(connection => {  
+ console.log('Music sedang berjalan')
+  const dispatcher2 = connection.playStream(ytdl(`https://www.youtube.com/watch?v=hHW1oY26kxQ`));
+  connection.dispatcher2.setVolumeLogarithmic(0.8);
+
+});
+let vEmbed = new Discord.RichEmbed()
+.setDescription('**📻 Radio `Music Tidur` Berhasil duputar 📻💤**')
 .setColor("#0093f3");  
 message.channel.send(vEmbed);
 
