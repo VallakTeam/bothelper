@@ -58,6 +58,18 @@ message.channel.send(vEmbed);
 music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
+  
+  function botStatus() {
+  let status = [
+`👋 Gunakan ${config.prefix}help.`,
+`🌍 Berada di ${music.guilds.size} server.`,
+`🛵 GO Invite Digital!!`,
+`👥 Memiliki ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} Anggota.`
+  ];
+  let rstatus = Math.floor(Math.random() * status.length);
+  music.user.setActivity(status[rstatus], {Type: 'STREAMING', url:'https://www.twitch.tv/verterid'});
+}; setInterval(botStatus, 10000)
+  
     console.log(`Logged in as : ${music.user.tag}`);
     console.log(`${music.user.username} is ready!`)
               
