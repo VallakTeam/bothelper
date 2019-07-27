@@ -21,7 +21,7 @@ exports.run = async(music, message, args, color, queue) => {
     .setTitle("Song Queue")
     .setDescription(`${serverQueue.songs.map(song => `**-** ${song.title}`).slice(0, 16).join('\n')}`)
     .setFooter("Currently Playing: " + serverQueue.songs[0].title)
-    .setColor('#0093f3')
+    .setColor('#ff0000')
     
     return message.channel.send({embed: queueInfo});
 
