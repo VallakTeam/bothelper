@@ -59,13 +59,7 @@ music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
   
-  function botStatus() {
-  let status = [
-`👋 Server Rust 2019.`,
-  ];
-  let rstatus = Math.floor(Math.random() * status.length);
-  music.user.setActivity(status[rstatus], {Type: 'STREAMING', url:'https://www.twitch.tv/verterid'});
-}; setInterval(botStatus, 10000)
+
   
     console.log(`Logged in as : ${music.user.tag}`);
     console.log(`${music.user.username} is ready!`)
