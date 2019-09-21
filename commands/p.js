@@ -56,7 +56,7 @@ const voiceChannel = message.member.voiceChannel;
             console.error(err);
             const noPick = new Discord.RichEmbed()
             .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pilihan video.")
-.setColor("#ff0000")
+.setColor("#19bcff")
             message.channel.send({embed: noPick});
             return;
           }
@@ -64,8 +64,8 @@ const voiceChannel = message.member.voiceChannel;
           .setTitle("🔍 Mencari lagu Terbaik")
           .setDescription(`\`\`\`ini
 [Mencari lagu yang tersimpan di File]\`\`\``)
-.setColor("#ff0000")
-          .setFooter("► Rust Indonesia 2019 ◀")
+.setColor("#19bcff")
+          .setFooter("► Simple Coding ◀")
           
           let msgtoDelete = await message.channel.send({embed: embed});
           const videoIndex = await parseInt(response);
@@ -123,7 +123,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
   } else {
             const noPick1 = new Discord.RichEmbed()
      .setDescription(`🦜 **${song.title}** \n🔔 has been added to the queue!`)
-     .setColor("#ff0000")
+     .setColor("#19bcff")
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
     if (playlist) return;
@@ -169,17 +169,17 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
       if(mlength !== 1 || mlength !== 0) {
         const embed2 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`**[${song.title}](${song.url})**`)
-         .addField(`<:a:585481073274650627> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField(`<:a:624902913260650507> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Voice Channels", `${song.channels}`, true)
-         .addField("🕒 | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
+         .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
         
 
-.setColor("#ff0000");
+.setColor("#19bcff");
 
 
       return  serverQueue.textChannel.send(embed2);
@@ -189,16 +189,16 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         if(secondslength !== 1 || secondslength !== 0) {
           const embed3 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField(`<:a:585481073274650627> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField(`<a:a:624902913260650507> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Voice Channels", `${song.channels}`, true)
-         .addField("🕒 | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
+         .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
 
-.setColor("#ff0000");
+.setColor("#19bcff");
 
         return serverQueue.textChannel.send(embed3);
     }}}
@@ -207,17 +207,17 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         if(secondslength !== 1 || secondslength !== 0) {
           const embed4 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField(`<:a:585481073274650627> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField(`<a:a:624902913260650507> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Voice Channels", `${song.channels}`, true)
-         .addField("🕒 | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
+         .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
 
 
-.setColor("#ff0000");
+.setColor("#19bcff");
 
         return serverQueue.textChannel.send(embed4);
     }}}
@@ -225,17 +225,17 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
       if(secondslength == 1 || secondslength == 0) {
           const embed5 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField(`<:a:585481073274650627> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField(`<a:a:624902913260650507> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Voice Channels", `${song.channels}`, true)
-         .addField("🕒 | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
+         .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
 
 
-.setColor("#ff0000");
+.setColor("#19bcff");
 
         return serverQueue.textChannel.send(embed5);
     }}
@@ -243,45 +243,45 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
       if(secondslength !== 1 || secondslength !== 0) {
         const embed6 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField(`<:a:585481073274650627> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField(`<a:a:624902913260650507> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Voice Channels", `${song.channels}`, true)
-         .addField("🕒 | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
+         .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
 
-.setColor("#ff0000");
+.setColor("#19bcff");
 
         return serverQueue.textChannel.send(embed6);
     }}
     if(song.durationh == 0 && song.durationm == 0 && song.durations !== 0) {
         const embed7 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField(`<:a:585481073274650627> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField(`<a:a:624902913260650507> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Voice Channels", `${song.channels}`, true)
-         .addField("🕒 | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
+         .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
-.setColor("#ff0000");
+.setColor("#19bcff");
 
       return serverQueue.textChannel.send(embed7);
     } else {
         const embed8 = new Discord.RichEmbed()
         .addField(`▶ | Musik:`,`[${song.title}](${song.url})`)
-         .addField(`<:a:585481073274650627> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
+         .addField(`<a:a:624902913260650507> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
-         .addField("📢 | Voice Channels", `${song.channels}`, true)
-         .addField("🙌 | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
 
-.setColor("#ff0000");
+.setColor("#19bcff");
 
       return serverQueue.textChannel.send(embed8);
     }

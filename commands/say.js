@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
       let sembed = new Discord.RichEmbed()
       .setDescription(`
 ${sayMessage}`)
-      .setColor("#ff0000");
+      .setColor("#19bcff");
       message.delete(2000).catch();
       message.channel.send(sembed);
 
