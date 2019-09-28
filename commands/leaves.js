@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
 message.member.voiceChannel.leave()
 let vEmbed = new Discord.RichEmbed()
 .setDescription('**📵 Bot berhasil di keluarkan 📵**')
-.setColor("#0093f3");  
+.setColor("#ff6b00");  
 message.channel.send(vEmbed);
 
 }

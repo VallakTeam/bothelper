@@ -56,16 +56,16 @@ const voiceChannel = message.member.voiceChannel;
             console.error(err);
             const noPick = new Discord.RichEmbed()
             .setDescription("Tidak ada atau nilai yang dimasukkan tidak valid, membatalkan pilihan video.")
-.setColor("#19bcff")
+.setColor("#ff6b00")
             message.channel.send({embed: noPick});
             return;
           }
           const embed = new Discord.RichEmbed()
           .setTitle("🔍 Mencari lagu Terbaik")
-          .setDescription(`\`\`\`ini
-[Mencari lagu yang tersimpan di File]\`\`\``)
-.setColor("#19bcff")
-          .setFooter("► Simple Coding ◀")
+          .setDescription(`\`\`\`diff
+- Mencari lagu yang tersimpan di File -\`\`\``)
+.setColor("#ff6b00")
+          .setFooter("► Kang Hosting ◀")
           
           let msgtoDelete = await message.channel.send({embed: embed});
           const videoIndex = await parseInt(response);
@@ -123,7 +123,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
   } else {
             const noPick1 = new Discord.RichEmbed()
      .setDescription(`🦜 **${song.title}** \n🔔 has been added to the queue!`)
-     .setColor("#19bcff")
+     .setColor("#ff6b00")
     serverQueue.songs.push(song);
     console.log(serverQueue.songs);
     if (playlist) return;
@@ -179,7 +179,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
         
 
-.setColor("#19bcff");
+.setColor("#ff6b00");
 
 
       return  serverQueue.textChannel.send(embed2);
@@ -198,7 +198,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#19bcff");
+.setColor("#ff6b00");
 
         return serverQueue.textChannel.send(embed3);
     }}}
@@ -217,7 +217,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#19bcff");
+.setColor("#ff6b00");
 
         return serverQueue.textChannel.send(embed4);
     }}}
@@ -235,7 +235,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#19bcff");
+.setColor("#ff6b00");
 
         return serverQueue.textChannel.send(embed5);
     }}
@@ -252,7 +252,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#19bcff");
+.setColor("#ff6b00");
 
         return serverQueue.textChannel.send(embed6);
     }}
@@ -267,7 +267,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
-.setColor("#19bcff");
+.setColor("#ff6b00");
 
       return serverQueue.textChannel.send(embed7);
     } else {
@@ -281,7 +281,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 
 
 
-.setColor("#19bcff");
+.setColor("#ff6b00");
 
       return serverQueue.textChannel.send(embed8);
     }
