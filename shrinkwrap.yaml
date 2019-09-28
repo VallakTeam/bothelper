@@ -12,6 +12,7 @@ dependencies:
   opusscript: 0.0.7
   simple-youtube-api: 5.2.1
   superagent: 3.8.3
+  uws: 99.0.0
   ytdl-core: 0.29.5
 packages:
   /abbrev/1.1.1:
@@ -1253,6 +1254,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
+  /uws/99.0.0:
+    deprecated: New code is available at github.com/uNetworking/uWebSockets.js
+    dev: false
+    resolution:
+      integrity: sha512-gbzhpHHE37BsiCB1raq5Wzf4ENKTaxyg1gZ7LJ/Z0za9Ic6EEwq5VpfivNh9Or2Tpf3f3jPEWCGLVDle2MukTg==
   /vary/1.1.2:
     dev: false
     engines:
@@ -1325,4 +1331,5 @@ specifiers:
   opusscript: ^0.0.7
   simple-youtube-api: ^5.2.1
   superagent: ^3.8.3
+  uws: ^99.0.0
   ytdl-core: ^0.29.5
