@@ -21,7 +21,7 @@ exports.run = async(music, message, args, color, queue) => {
       
       const rEmbed = new Discord.RichEmbed()
       .setDescription(":arrow_forward: Resume the paused music for you!")
-      .setColor('#ff0000');
+      .setColor('#5c6a7a');
 
       return message.channel.send(rEmbed);
     }
