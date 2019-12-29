@@ -65,7 +65,7 @@ const voiceChannel = message.member.voiceChannel;
           .setDescription(`\`\`\`diff
 - Mencari lagu yang tersimpan di File -\`\`\``)
 .setColor("#5c6a7a")
-          .setFooter("► Kang Hosting ◀")
+          .setFooter("► Adit Music ◀")
           
           let msgtoDelete = await message.channel.send({embed: embed});
           const videoIndex = await parseInt(response);
@@ -211,7 +211,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
          .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/TmSfsNj)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
@@ -229,7 +229,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
          .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/TmSfsNj)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
@@ -247,7 +247,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
          .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/TmSfsNj)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
@@ -263,7 +263,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
          .addField("<a:a:624903307634278410> | Duration", `${song.durationh}:${song.durationm}:0${durations}`, true)
-         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/TmSfsNj)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
@@ -276,7 +276,7 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
          .addField(`<a:a:624902913260650507> | Uploaded`, `[${song.uploadedby}](${song.channelurl})`, true)
         .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`)
          .addField("<a:a:624903079434911764> | Voice Channels", `${song.channels}`, true)
-         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/JD3ca8z)`, true)
+         .addField("<a:a:624903514803535902> | Support Server", `[\`Klik Disini\`](https://discord.gg/TmSfsNj)`, true)
         .setImage('https://cdn.discordapp.com/attachments/519028852647919648/542879692622004245/multicolours_1.gif')
 
 
