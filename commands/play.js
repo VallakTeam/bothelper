@@ -293,9 +293,4 @@ exports.help = {
     description: "Sings music to you",
     usage: "ms!play [song-name] || [url] || [playlist-url]"
 
-`music.on`('ready', () => {
-music.user.setActivity('!help', { type: 'LISTENING' })
-  console.log(`${music.user.username} Online!`);
-});
-
 }

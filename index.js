@@ -59,7 +59,6 @@ music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
   
-
   
     console.log(`Logged in as : ${music.user.tag}`);
     console.log(`${music.user.username} is ready!`)
