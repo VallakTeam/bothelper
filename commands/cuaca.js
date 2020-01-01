@@ -1,37 +1,29 @@
 const Discord = require('discord.js');
-const { stripIndents } = require("common-tags");
-const fetch = require("node-fetch");
+const weather = require('weather-js');
 
 exports.run = async (client, message, args) => {
-        const daerah = args.join(" ");
-  
-        if (!daerah) {
-            return message.channel.send("Usage: /cuaca <kota>")
-                .then(m => m.delete(5000));
-        }
 
-        const url = `https://rest.farzain.com/api/cuaca.php?id=${daerah}&apikey=21AuixDfnVIOkjlCOlfVcZJQe`;
-        
-        let res; 
+   weather.find({search: args.join(" "), degreeType: 'C'}, function(err, result) {
+            if (err) message.channel.send(err);
 
-        try {
-            res = await fetch(url).then(url => url.json());
-        } catch (e) {
-            return message.reply("Tidak Menemukan Cuaca Di Kota Itu")
-                .then(m => m.delete(5000));
-        }
+            if (result.length === 0) {
+                message.channel.send('**Please enter a valid location.**')
+                return;
+            }
 
-        const cuaca = res.respon;
+            var current = result[0].current;
+            var location = result[0].location;
 
-        const embed = new Discord.RichEmbed()
-            .setColor("RANDOM")//warna
-            .addField("Daftar Cuaca", stripIndents`**- Tempat:** ${cuaca.tempat}
-            **- Cuaca:** ${cuaca.cuaca}
-            **- Deskripsi:** ${cuaca.deskripsi}
-            **- Suhu:** ${cuaca.suhu}
-            **- Kelembapan:** ${cuaca.kelembapan}
-            **- Udara:** ${cuaca.udara}
-            **- Angin:** ${cuaca.angin})
-        message.channel.send(embed);
+            const embed = new Discord.RichEmbed()
+                .setDescription(`**${current.skytext}**`)
+                .setAuthor(`Cuaca Untuk ${current.observationpoint}`)
+                .setThumbnail(current.imageUrl)
+                .setColor(0x00AE86)
+                .addField('Zona Waktu',`UTC${location.timezone}`, true)
+                .addField('Suhu Derajat',`${current.temperature} °C`, true)
+                .addField('Kecepatan Angin',current.windspeed, true)
+                .addField('Kelembaban', `${current.humidity}%`, true)
 
-}
+                message.channel.send(embed);
+        });
+    }
