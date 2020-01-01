@@ -35,6 +35,5 @@ exports.run = async (client, message, args) => {
             **- Followers:** ${account.edge_followed_by.count}
             **- Following:** ${account.edge_follow.count}
             **- Private account:** ${account.is_private ? "Yes 🔐" : "Nope 🔓"}`);
-
         message.channel.send(embed);
     }

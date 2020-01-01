@@ -24,15 +24,14 @@ exports.run = async (client, message, args) => {
         const cuaca = res.respon;
 
         const embed = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .addField(`Daftar Cuaca`, stripIndents`**- Tempat:** ${cuaca.tempat}
+            .setColor("RANDOM")//warna
+            .addField("Daftar Cuaca", stripIndents`**- Tempat:** ${cuaca.tempat}
             **- Cuaca:** ${cuaca.cuaca}
             **- Deskripsi:** ${cuaca.deskripsi}
             **- Suhu:** ${cuaca.suhu}
             **- Kelembapan:** ${cuaca.kelembapan}
             **- Udara:** ${cuaca.udara}
-            **- Angin:** ${cuaca.angin}`)
+            **- Angin:** ${cuaca.angin})
         message.channel.send(embed);
-
 
 }
