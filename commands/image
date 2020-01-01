@@ -1,0 +1,29 @@
+client.on('message', msg => {
+  if (msg.content === 'r.lagi nungguin ya') {
+    msg.reply('https://tenor.com/7rEG.gif');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'hello guys') {
+    msg.reply('https://tenor.com/beMad.gif');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Adit Youtube') {
+    msg.reply('https://www.youtube.com/channel/UCfJLgtK-Z-xNUz9UEJk1-0g');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Ohayou') {
+    msg.reply('https://tenor.com/bevHs.gif');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Oyasuminasai') {
+    msg.reply('https://tenor.com/KPLv.gif');
+  }
+});
