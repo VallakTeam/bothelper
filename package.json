@@ -31,6 +31,8 @@
     "common-tags": "^1.8.0",
     "node-fetch": "^2.6.0",
     "weather-js": "^2.0.0",
-    "kitsu.js": "^2.0.0"
+    "kitsu.js": "^2.0.0",
+    "cheerio": "^0.22.0",
+    "request": "^2.88.0"
   }
 }
