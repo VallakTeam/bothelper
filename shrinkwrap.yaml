@@ -11,6 +11,8 @@ dependencies:
   https: 1.0.0
   kitsu.js: 2.0.0
   moment: 2.24.0
+  moment-duration-format: 2.3.2
+  ms: 2.1.2
   node-fetch: 2.6.0
   node-gyp: 3.8.0
   node-opus: 0.2.9
@@ -19,6 +21,7 @@ dependencies:
   random-puppy: 1.1.0
   request: 2.88.0
   simple-youtube-api: 5.2.1
+  string-similarity: 1.2.2
   superagent: 3.8.3
   uws: 99.0.0
   weather-js: 2.0.0
@@ -865,6 +868,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-0JF4cW/+pN3p5ft7N/bwgCJ0WAw=
+  /lodash.every/4.6.0:
+    dev: false
+    resolution:
+      integrity: sha1-64mYS+vENkJ5uzrvu9HKGb+mxqc=
   /lodash.filter/4.6.0:
     dev: false
     resolution:
@@ -873,6 +880,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8=
+  /lodash.flattendeep/4.4.0:
+    dev: false
+    resolution:
+      integrity: sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
   /lodash.foreach/4.5.0:
     dev: false
     resolution:
@@ -881,6 +892,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-dx7Hg540c9nEzeKLGTlMNWL09tM=
+  /lodash.maxby/4.6.0:
+    dev: false
+    resolution:
+      integrity: sha1-CCJABo88eiJ6oAqDgOTzjPB4bj0=
   /lodash.merge/4.6.2:
     dev: false
     resolution:
@@ -980,6 +995,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
+  /moment-duration-format/2.3.2:
+    dev: false
+    resolution:
+      integrity: sha512-cBMXjSW+fjOb4tyaVHuaVE/A5TqkukDWiOfxxAjY+PEqmmBQlLwn+8OzwPiG3brouXKY5Un4pBjAeB6UToXHaQ==
   /moment/2.24.0:
     dev: false
     resolution:
@@ -1413,6 +1432,16 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+  /string-similarity/1.2.2:
+    dependencies:
+      lodash.every: 4.6.0
+      lodash.flattendeep: 4.4.0
+      lodash.foreach: 4.5.0
+      lodash.map: 4.6.0
+      lodash.maxby: 4.6.0
+    dev: false
+    resolution:
+      integrity: sha512-IoHUjcw3Srl8nsPlW04U3qwWPk3oG2ffLM0tN853d/E/JlIvcmZmDY2Kz5HzKp4lEi2T7QD7Zuvjq/1rDw+XcQ==
   /string-width/1.0.2:
     dependencies:
       code-point-at: 1.1.0
@@ -1681,7 +1710,9 @@ specifiers:
   fs-nextra: ^0.3.5
   https: ^1.0.0
   kitsu.js: ^2.0.0
-  moment: ^2.21.0
+  moment: ^2.22.2
+  moment-duration-format: ^2.2.2
+  ms: ^2.1.1
   node-fetch: ^2.6.0
   node-gyp: ^3.6.2
   node-opus: ^0.2.7
@@ -1690,6 +1721,7 @@ specifiers:
   random-puppy: ^1.1.0
   request: ^2.88.0
   simple-youtube-api: ^5.2.1
+  string-similarity: ^1.2.0
   superagent: ^3.8.3
   uws: ^99.0.0
   weather-js: ^2.0.0

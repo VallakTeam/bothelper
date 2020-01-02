@@ -36,6 +36,10 @@
     "request": "^2.88.0",
     "random-puppy": "^1.1.0",
     "quick.hook": "^1.4.0",
+    "string-similarity": "^1.2.0",
+    "moment": "^2.22.2",
+    "moment-duration-format": "^2.2.2",
+    "ms": "^2.1.1",
     "fs-nextra": "^0.3.5"
   }
 }
