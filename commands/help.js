@@ -4,8 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
 let commands = new Discord.RichEmbed()
 .setAuthor(`Rakan Aditya`)
-.addField ("``r.welcome``","**__set up your welcome message channel.__**")
-
+.addField(`---- main command --- `,`\`r.main\``)
 
 message.channel.send(commands).then(message => message.react('✔'))
 
