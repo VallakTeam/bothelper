@@ -48,6 +48,7 @@
     "discord-money": "^0.2.0",
     "sqlite3": "^4.0.1",
     "relevant-urban": "^2.0.0",
+    "twemoji": "^11.0.0",
     "child_process": "^1.0.2"
   }
 }

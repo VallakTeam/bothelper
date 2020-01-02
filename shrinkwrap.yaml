@@ -31,6 +31,7 @@ dependencies:
   sqlite3: 4.1.1
   string-similarity: 1.2.2
   superagent: 3.8.3
+  twemoji: 11.3.0
   uws: 99.0.0
   weather-js: 2.0.0
   ytdl-core: 1.0.6
@@ -1786,6 +1787,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-kcoMoKTPYnoeS50tzoqjPY3Uv9axeuuFAZY9M/9zFnhoVvRfxz9K29IMPD7jGmt2c8SW7i3gT9WqDl2+nV7p4A==
+  /twemoji/11.3.0:
+    dev: false
+    resolution:
+      integrity: sha512-xN/vlR6+gDmfjt6LInAqwGAv3Agwrmzx5TD1jEFwKS19IOGDrX0/3OB8GP1wUYPVIdkaer5hw6qd+52jzvz0Lg==
   /type-is/1.6.18:
     dependencies:
       media-typer: 0.3.0
@@ -1977,6 +1982,7 @@ specifiers:
   sqlite3: ^4.0.1
   string-similarity: ^1.2.0
   superagent: ^3.8.3
+  twemoji: ^11.0.0
   uws: ^99.0.0
   weather-js: ^2.0.0
   ytdl-core: ^1.0.4
