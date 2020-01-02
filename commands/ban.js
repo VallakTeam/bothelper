@@ -2,10 +2,10 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(bUser === message.author) return message.channel.send("Are you retarded? Why do you want to ban yourself?")
-    if(!bUser) return message.channel.send("Can't find user!");
+  if(bUser === message.author) return message.channel.send("Apakah Anda terbelakang? Mengapa Anda ingin mencekal diri sendiri?")
+    if(!bUser) return message.channel.send("Tidak dapat menemukan pengguna!");
     let bReason = args.join(" ").slice(22);
-   if(!bReason) return message.channel.send("Please provide a reason!")
+   if(!bReason) return message.channel.send("Tolong berikan alasannya!")
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("**You don't have `BAN_MEMBERS` permissons.**");
 
     let banEmbed = new Discord.RichEmbed()
@@ -23,10 +23,10 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#bc0000")
     .addField("Moderator", message.author.tag)
     .addField("Reason", `${bReason ? bReason : "None."}`)
-  message.channel.send("**That member has been banned.**")
+  message.channel.send("**Anggota itu telah dilarang.**")
   bUser.ban(bReason)
   incidentchannel.send(banEmbed);
-  try{bUser.send(embed)}catch(e){message.channel.send("Unable to send message to user.")}
+  try{bUser.send(embed)}catch(e){message.channel.send("Tidak dapat mengirim pesan ke pengguna.")}
 
 }
 

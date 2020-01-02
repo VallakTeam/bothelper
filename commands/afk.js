@@ -12,11 +12,11 @@ exports.run = function(client, message, args) {
 		
 	if (args.length === 0) {
 		afk[message.author.id] = {"reason": true};
-		embed.addField('AFK', "You are now AFK!")
+		embed.addField('AFK', "Anda sekarang AFK!")
 		message.channel.send({embed}).then(x => DeleteQueue.add(x, 10000));
 	} else {
 		afk[message.author.id] = {"reason": args.join(" ")};
-		embed.addField('AFK', "I set your AFK reason to: " + "**" + args.join(" ") + "**")
+		embed.addField('AFK', "Saya menetapkan alasan AFK Anda ke: " + "**" + args.join(" ") + "**")
 		message.channel.send({embed}).then(x => DeleteQueue.add(x, 10000));
 	}
 	
