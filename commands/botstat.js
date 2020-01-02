@@ -43,7 +43,7 @@ module.exports.conf = {
 };
 
 module.exports.help = {
-  name: "?botstat",
+  name: "botstat",
   category: "Miscelaneous",
   description: "Gives some useful bot statistics",
   usage: "botstat"

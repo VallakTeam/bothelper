@@ -40,6 +40,9 @@
     "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
     "ms": "^2.1.1",
-    "fs-nextra": "^0.3.5"
+    "fs-nextra": "^0.3.5",
+    "discord": "^0.8.2",
+    "cpu-stat": "^2.0.1",
+    "os": "^0.1.1"
   }
 }
