@@ -30,5 +30,5 @@ return;
 }
 
 module.exports.help = {
-  name: "weather"
+  name: "cuaca"
 }
