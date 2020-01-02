@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
     args = args.join(" ");
     message.reply("Thanks for suggesting something!");
     const content = `**${message.author.username}#${message.author.discriminator}** (${message.author.id}) suggested:\n~~--------------------------------~~\n${args}\n~~--------------------------------~~\nOn the server: **${message.guild.name}**\nServer ID: **${message.guild.id}**`;
-    client.channels.get('602036985774997507').send(`${content}`)
+    client.channels.get('662300978845974549').send(`${content}`)
 }
 
 exports.conf = {
