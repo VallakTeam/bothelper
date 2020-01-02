@@ -13,5 +13,5 @@ module.exports.run = function(bot, command, args, message, updateJSON, addFooter
 }
 
 module.exports.help = {
-    name: 'rc'
+    name: 'roles'
 }
