@@ -4,8 +4,8 @@ module.exports.run = async (bot, message, args) => {
     
     let pages = [
       'Our Team\n Helper: Sap-Hapling09#1646\n Dev helper: liberty_fromanother_universe#8543\n Dev helper: MD. Jamie#2767',
-      'Owner\n Name: MR JACKHDz#5248', 
-      'Our Discord Server\n link: https://discord.gg/DrpkVTS', 
+      'Owner\n Name: Rakan Aditya Official#6073', 
+      'Our Discord Server\n link: coming soon', 
       'Big thx to everyone who help us!', 
       "**That's it**", 
       'you can go now...']
