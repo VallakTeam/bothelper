@@ -24,6 +24,7 @@ dependencies:
   os: 0.1.1
   quick.hook: 1.5.1
   random-puppy: 1.1.0
+  relevant-urban: 2.0.0
   request: 2.88.0
   simple-youtube-api: 5.2.1
   sqlite3: 4.1.1
@@ -1479,6 +1480,12 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-2cBCniTtxcGUjDpvFfVpw323a83/0RLSGJJY5l5lcomZWhYpU2cuLdsvYqMixvsdLJ9+sTdzEkju8J8ZHDM2nA==
+  /relevant-urban/2.0.0:
+    dependencies:
+      snekfetch: 3.6.4
+    dev: false
+    resolution:
+      integrity: sha1-abvU9DpnSQjbkI4n8jCWyw8kuLk=
   /request/2.88.0:
     dependencies:
       aws-sign2: 0.7.0
@@ -1958,6 +1965,7 @@ specifiers:
   os: ^0.1.1
   quick.hook: ^1.4.0
   random-puppy: ^1.1.0
+  relevant-urban: ^2.0.0
   request: ^2.88.0
   simple-youtube-api: ^5.2.1
   sqlite3: ^4.0.1
