@@ -33,6 +33,9 @@
     "weather-js": "^2.0.0",
     "kitsu.js": "^2.0.0",
     "cheerio": "^0.22.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "random-puppy": "^1.1.0",
+    "quick.hook": "^1.4.0",
+    "fs-nextra": "^0.3.5"
   }
 }
