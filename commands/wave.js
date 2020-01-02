@@ -1,5 +1,5 @@
 exports.run = async (bot, message, args) => {
-    let waveMessage = await message.channel.send('o/');
+    let waveMessage = await message.channel.send('start');
     waveMessage.edit(`1`);
     waveMessage.edit(`2`);
     waveMessage.edit(`5`);
