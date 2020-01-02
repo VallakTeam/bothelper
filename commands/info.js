@@ -12,7 +12,7 @@ message.channel.send({embed: {
     description: "Thx for using our nice and cool discord bot!",
     fields: [{
         name: "The Owner",
-        value: "It's the one and only JACKHDz#5248"
+        value: "It's the one and only Rakan Aditya Official#6073"
       },
            {
         name: "Developers",

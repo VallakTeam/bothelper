@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   .setThumbnail(bot.user.displayAvatarURL)
     .addField("r.timer","Set a custome timer")
    .addField("r.weather","Get custome weather stats. ``Ex:`` ?weather us")
-.addField("r.remind","Set custome reminder. ``Ex:`` ?remind 1m to to school")
+.addField("r.remind","Set custome reminder. ``Ex:`` r.remind 1m to to school")
   .setFooter("If you found a bug please report it using ?bugreport")
     message.channel.send(embed);
 }
