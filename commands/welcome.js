@@ -1,12 +1,14 @@
-const Discord = require("discord.js")
+client.on("guildMemberAdd",function(message) {
 
-module.exports.run = async (bot, message, args) => {
+  let guild = message.guild;
+  let member = message;
+  let membercount = client.user.size;
 
-  message.channel.send("To setup welcome messages on this server, make a channel called: `welcome`\nToo lazy to create the channel? Simply type `r.setup` and I will set up welcome messages up for you.");
+  const embed = new Discord.RichEmbed
+  .setColor(0xffffff)
+  .setTitle(`adit music Bot = welcome`)
+  .setDescription('hallo ${member.user}, welcome to wibu & gamers.')
+  .setThumbnail(member.user.avatarURL)
+  
 
-}
-
-
-module.exports.help = {
-    name: "welcome"
-}
+  member.guild.channel.find('name', 'welcome').send({ embed: embed});
