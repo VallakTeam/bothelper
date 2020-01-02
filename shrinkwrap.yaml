@@ -15,6 +15,7 @@ dependencies:
   fs-nextra: 0.3.8
   https: 1.0.0
   kitsu.js: 2.0.0
+  math-expression-evaluator: 1.2.17
   moment: 2.24.0
   moment-duration-format: 2.3.2
   ms: 2.1.2
@@ -1171,6 +1172,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-9WLF1VAtbVij03HWJKbVZ8L0orsoZiP53UljR5EwaDrozQFMsTGRDPe3PbzWV73He8a+j5H/hWZNoI2VkUSsiw==
+  /math-expression-evaluator/1.2.17:
+    dev: false
+    resolution:
+      integrity: sha1-3oGf282E3M2PrlnGrreWFbnSZqw=
   /media-typer/0.3.0:
     dev: false
     engines:
@@ -2221,6 +2226,7 @@ specifiers:
   fs-nextra: ^0.3.5
   https: ^1.0.0
   kitsu.js: ^2.0.0
+  math-expression-evaluator: ^1.2.17
   moment: ^2.22.2
   moment-duration-format: ^2.2.2
   ms: ^2.1.1
