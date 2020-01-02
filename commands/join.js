@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
 
     // check all voice channels
     if(!message.member.guild.voiceConnection){
-        message.channel.send("I can only come to your channel when I'm playing music. use `?play  <music name/URL>` first :)");
+        message.channel.send("I can only come to your channel when I'm playing music. use `r.play  <music name>` first :)");
         return;
     }
 

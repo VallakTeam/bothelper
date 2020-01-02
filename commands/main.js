@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
   .addField ("r.google","Google anything you want")
   .addField("r.pat","Pat someone")
   .addField("r.join","join your vc")
+  .addField("r.cuaca","see the weather conditions")
   .addField("r.bunny","Get random bunny pictures")
   .addField("r.daily","Get daily money.")
   .addField("r.money","see how many money do you have.")
