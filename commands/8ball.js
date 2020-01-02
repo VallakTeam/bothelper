@@ -1,22 +1,22 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-  if(!args[2]) return message.reply("Please ask a full question")
-  let replies = ["It is certain", "It is decidedly so",
-										"Without a doubt",
-										"Yes, definitely",
-										"As I see it, yes",
-										"Most likely",
-										"Yes",
-										"Signs point to yes",
-										"Ask again later",
-										"Better not tell you now",
-										"Cannot predict now",
-										"Concentrate and ask again",
-										"Don't count on it",
-										"My reply is no",
-										"My sources say no",
-										"Very doubtful"];
+  if(!args[2]) return message.reply("Silakan ajukan pertanyaan lengkap")
+  let replies = ["Sudah pasti", "Jelas sekali demikian",
+										"Tanpa keraguan",
+										"Iya tentu saja",
+										"Seperti yang saya lihat, ya",
+										"Yang paling disukai",
+										"Iya",
+										"Tanda menunjukkan ya",
+										"Tanya lagi nanti",
+										"Lebih baik tidak memberi tahu Anda sekarang",
+										"Tidak dapat memprediksi sekarang",
+										"Berkonsentrasi dan bertanya lagi",
+										"Jangan mengandalkan itu",
+										"Balasan saya tidak ",
+										"Sumber saya mengatakan tidak",
+										"Sangat meragukan"];
   
   let result = Math.floor((Math.random() * replies.length));
   let question = args.slice(0).join(" ");
