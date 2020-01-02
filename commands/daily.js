@@ -17,7 +17,6 @@ module.exports.run = async (bot,message, args) => {
       .setDescription(`The bank of ${message.guild.name}`)
       .addBlankField(true)
       .addField("Account Holder", `${message.author.username}`, true)
-      .addField("Interest Amount", 100, true)
       .addField("Interest Amount", 50, true)
 message.channel.send(collectembed)
   })
