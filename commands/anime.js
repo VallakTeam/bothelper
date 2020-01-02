@@ -33,7 +33,7 @@ exports.conf = {
 }
 
 exports.help = {
-  name: 'r.anime',
+  name: 'anime',
   category: 'Costum',
   description: 'Find Your Favoret anime here!',
   usage: 'anime <anime-name>'
