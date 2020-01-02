@@ -3,9 +3,9 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
  let embed = new Discord.RichEmbed()
   .setTitle("Evaluation")
-  .setDescription("Sorry, the `eval` command can only be executed by the Developer.")
+  .setDescription("Maaf, itu `eval` perintah hanya dapat dieksekusi oleh Pengembang.")
   .setColor("#cdf785");
-  if(message.author.id !== '445266641954275328') return message.channel.send(embed);
+  if(message.author.id !== '602036985774997507') return message.channel.send(embed);
   function clean(text) {
   if (typeof(text) === "string")
     return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
