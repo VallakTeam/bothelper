@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
 let embed = new Discord.RichEmbed()
-    .setTitle("list of command")
+    .setTitle("Music Commands")
 
 .setColor("RANDOM")
 .setAuthor(`${bot.user.tag}`, bot.user.displayAvatarURL)
