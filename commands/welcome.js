@@ -8,8 +8,9 @@ app.get("/", (request, response) => {
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
-setInternal(() => {
-  http.get
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
 
 client.on("guildMemberAdd", member => {
   var channel = member.guild.channels.find(ch => ch.id === "662433738981900338")
@@ -43,5 +44,4 @@ Member now : {member.guild.memberCount}\`\`\``)
   .setColor("RANDOM")
   if(channel) return channel.send(embed)
 });
-
 client.login("NjU3MzUxOTY5MjUzNDkwNjk5.Xgp17w.nyWBwlqGOAwSAmKHcgPmBibGByM")
