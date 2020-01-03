@@ -25,10 +25,10 @@ module.exports.run = async (bot, message, args) => {
     .addField("r.wur","Would you rather.")
   .addField("r.bond", "Displays how well two users would love/bond together.")
   .addField("r.mybot","serverbot.")
-   .addField("r.seizure", "Usage: ?seizure")
-.addField("r.ship", "Usage: ?ship [@user1] [@user2]")
+   .addField("r.seizure", "Usage: r.seizure")
+.addField("r.ship", "Usage: r.ship [@user1] [@user2]")
   .setColor("#e2df1b")
-    .setFooter("if you want to suggest us something you can do it by doing ?suggest <suggestion>")
+    .setFooter("if you want to suggest us something you can do it by doing r.suggest <suggestion>")
     .setTimestamp()
     message.channel.send(embed);
 }
