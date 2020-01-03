@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) =>{
   .setColor("#cdf785");
   if(message.author.id !== '602036985774997507') return message.channel.send(embed);
   
-message.channel.send(`Restarted in ${Math.floor(bot.ping)}ms`).then(() =>{
+message.channel.send(`Restarted in❤️️ ${Math.floor(bot.ping)}ms`).then(() =>{
 process.exit(1);
 })
  
