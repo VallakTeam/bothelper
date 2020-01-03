@@ -60,7 +60,7 @@ music.on('guildMemberAdd', member => {
 	if (!channel) return;
   let bicon = music.user.displayAvatarURL
   let embed = new Discord.RichEmbed()
-  .setAuthor(`Welcome To ${music.guild.name}`, music.user.displayAvatarURL)
+  .setAuthor(`Welcome To Wibu My Life Otaku & Gamers`, music.user.displayAvatarURL)
   .setColor("RANDOM")
   .setTimestamp()
   .setThumbnail(bicon)
