@@ -25,7 +25,8 @@ music.on("ready", function() {
   setInterval(async () => {
     const statuslist = [
       `r.help | Adit Bot`,
-      `r.dev | ON DEVELOPMENT`
+      `r.dev | ON DEVELOPMENT`,
+      `.addField("Server", bot.guilds.size)`
     ];
     const random = Math.floor(Math.random() * statuslist.length);
     try {
