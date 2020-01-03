@@ -8,14 +8,15 @@ const Discord = require("discord.js");
 	const embedheads = new Discord.RichEmbed()
 	.setTitle("Coinflip")
 	.setColor("#F8A61C")
-	.setDescription(`The coin landed on heads!`);
+	.setDescription(`The coin landed **heads!**`);
+  .set
 	message.channel.send(embedheads);
 	} else if (resultflip == 2) {
 
 	const embedtails = new Discord.RichEmbed()
 	.setTitle("Coinflip")
 	.setColor("#F8A61C")
-	.setDescription(`The coin landed on tails!`);
+	.setDescription(`The coin landed **tails!**`);
 	message.channel.send(embedtails);
 	}
 	}
