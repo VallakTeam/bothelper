@@ -16,11 +16,13 @@ module.exports.run = async (bot, message, args) => {
     }
     }
     let embed = new Djs.RichEmbed()
-    .setAuthor('Cmd Avatar')
+    .setAuthor('Evaluasi')
     .setColor('WHITE')
     .addField('📥 Masuk', `\`\`\`js\n${codein}\`\`\``)
     message.channel.send(embed).then(msg => msg.react('✅'))
-  } catch (e) {
-    message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))
-  }
-  }
+message.channel.send(embed);
+}
+
+module.exports.help = {
+  name: "dev"
+}
