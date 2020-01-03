@@ -32,6 +32,7 @@ message.channel.send(collectembed)
   }
 }
 
+
 module.exports.help = {
     name: 'daily'
 }
