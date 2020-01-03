@@ -7,9 +7,9 @@ const Discord = require("discord.js");
 
 	const embedheads = new Discord.RichEmbed()
 	.setTitle("Coinflip")
+  .setImage(':Coin: ')
 	.setColor("#F8A61C")
 	.setDescription(`The coin landed **heads!**`);
-  .addImage('')
 	message.channel.send(embedheads);
 	} else if (resultflip == 2) {
 
