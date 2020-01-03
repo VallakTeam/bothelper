@@ -9,7 +9,7 @@ const Discord = require("discord.js");
 	.setTitle("Coinflip")
 	.setColor("#F8A61C")
 	.setDescription(`The coin landed **heads!**`);
-  .set
+  .addImage('')
 	message.channel.send(embedheads);
 	} else if (resultflip == 2) {
 
