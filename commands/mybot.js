@@ -11,8 +11,8 @@ module.exports.run = async (bot, message, args) => {
   .addField("Server", bot.guilds.size)
   .addField("Channel", bot.channels.size)
   .addField("User", bot.users.size)
-  .addField("**Bot**", `${message.author.bot}`)
-  .setColor("#ebf442");
+  .addField("**Bot**", `${bot.user.tag}`)
+  .setColor("RANDOM");
   message.channel.send(embed);
 }
 
