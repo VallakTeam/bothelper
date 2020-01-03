@@ -5,6 +5,7 @@ const superagent = require("superagent");
 const {color} = require('./config.json');
 const queue = new Map();
 const ytdl = require("ytdl-core");
+const Canvas = require('canvas');
 
 const http = require('http');
 const fs = require("fs");
@@ -54,6 +55,39 @@ message.channel.send(vEmbed);
   }
 });
 
+music.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.find(ch => ch.name === 'welcome-goodbye');
+	if (!channel) return;
+  let bicon = music.user.displayAvatarURL
+  let embed = new Discord.RichEmbed()
+  .setAuthor(`Welcome To ${music.guild.name}`, music.user.displayAvatarURL)
+  .setColor("RANDOM")
+  .setTimestamp()
+  .setThumbnail(bicon)
+  .setDescription(`
+Your Identify :
+\`\`\Username : ${member.user.username}
+Tag : ${member.user.tag}'
+Member Now : ${member.guild.memberCount}\`\``)
+  if(channel) return channel.send(embed)
+});
+  
+music.on('guildMemberRemove', member => {
+	const channel = member.guild.channels.find(ch => ch.name === 'welcome-goodbye');
+	if (!channel) return;
+  let bicon = music.user.displayAvatarURL
+  let embed = new Discord.RichEmbed()
+  .setAuthor(`GoodBye My Friends`, music.user.displayAvatarURL)
+  .setColor("RANDOM")
+  .setTimestamp()
+  .setThumbnail(bicon)
+  .setDescription(`
+Your Identify :
+\`\`\Username : ${member.user.username}
+Tag : ${member.user.tag}'
+Member Now : ${member.guild.memberCount}\`\``)
+  if(channel) return channel.send(embed)
+});
 
 music.login(process.env.TOKEN);
 

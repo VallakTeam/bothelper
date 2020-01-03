@@ -1,5 +1,5 @@
 dependencies:
-  canvas: 1.6.13
+  canvas: 2.6.1
   canvas-constructor: 1.1.2
   cheerio: 0.22.0
   child_process: 1.0.2
@@ -231,15 +231,17 @@ packages:
       canvas: 'github:Automattic/node-canvas'
     resolution:
       integrity: sha512-KNkdUmDvl1pJC/5rGRhhOAqmgZgD/4b8Z3u8ihNCXCFWZA4O8tNbXOMzvhH+TrteKUPBEQk5gWR/bhTH+WSz2g==
-  /canvas/1.6.13:
+  /canvas/2.6.1:
     dependencies:
       nan: 2.14.0
+      node-pre-gyp: 0.11.0
+      simple-get: 3.1.0
     dev: false
     engines:
-      node: '>=0.8.0'
+      node: '>=6'
     requiresBuild: true
     resolution:
-      integrity: sha512-XAfzfEOHZ3JIPjEV+WSI6PpISgUta3dgmndWbsajotz+0TQOX/jDpp2kawjRERatOGv9sMMzk5auB3GKEKA6hg==
+      integrity: sha512-S98rKsPcuhfTcYbtF53UIJhcbgIAK533d1kJKMwsMwAIFgfd58MOyxRud3kktlzWiEkFliaJtvyZCBtud/XVEA==
   /capture-stack-trace/1.0.1:
     dev: false
     engines:
@@ -436,6 +438,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
+  /decompress-response/4.2.1:
+    dependencies:
+      mimic-response: 2.0.0
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-jOSne2qbyE+/r8G1VU+G/82LBs2Fs4LAsTiLSHOCOMZQl2OKZ6i8i4IyHemTe+/yIXOtTcRQMzPcgyhoFlqPkw==
   /deep-extend/0.6.0:
     dev: false
     engines:
@@ -1221,6 +1231,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
+  /mimic-response/2.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-8ilDoEapqA4uQ3TwS0jakGONKXVJqpy+RpM+3b7pLdOjghCrEiGp9SRkFbUHAmZW9vdnrENWHjaweIoTIJExSQ==
   /miniget/1.6.1:
     dev: false
     engines:
@@ -1788,6 +1804,18 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
+  /simple-concat/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-c0TLuLbib7J9ZrL8hvn21Zl1IcY=
+  /simple-get/3.1.0:
+    dependencies:
+      decompress-response: 4.2.1
+      once: 1.4.0
+      simple-concat: 1.0.0
+    dev: false
+    resolution:
+      integrity: sha512-bCR6cP+aTdScaQCnQKbPKtJOKDp/hj9EDLJo3Nw4y1QksqaovlW/bnptB6/c1e+qmNIDHRK+oXFDdEqBT8WzUA==
   /simple-youtube-api/5.2.1:
     dependencies:
       iso8601-duration: 1.2.0
@@ -2222,7 +2250,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  canvas: ^1.6.12
+  canvas: ^2.6.1
   canvas-constructor: ^1.0.1
   cheerio: ^0.22.0
   child_process: ^1.0.2
