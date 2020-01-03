@@ -19,10 +19,29 @@ const Discord = require("discord.js");
 	.setColor("#F8A61C")
 	.setDescription(`The coin landed **tails!**`);
 	message.channel.send(embedtails);
-	}
-	}
 
-	
-	module.exports.help = {
-	name: "flip"
+  var resultflip = Math.floor((Math.random() * 2) + 1);
+	if (resultflip == 1) {
+  const embedtails = new Discord.RichEmbed()
+	.setTitle("Coinflip")
+  .setImage('https://discordemoji.com/assets/emoji/Coin.gif')
+	.setColor("#F8A61C")
+	.setDescription(`The coin landed **body!**`);
+	message.channel.send(embedtails);
+  } else if (resultflip == 3) {
+
+	const embedtails = new Discord.RichEmbed()
+	.setTitle("Coinflip")
+  .setImage('https://discordemoji.com/assets/emoji/Coin.gif')
+	.setColor("#F8A61C")
+	.setDescription(`The coin landed **lip!**`);
+	message.channel.send(embedtails);
+  } else if (resultflip === 4) {
   }
+  }
+	}
+  
+
+module.exports.help = {
+	name: "flip"
+}
