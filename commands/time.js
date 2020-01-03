@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("r.timer","Set a custome timer")
    .addField("r.cuaca","Get custome weather stats. ``Ex:`` r.cuaca us")
 .addField("r.remind","Set custome reminder. ``Ex:`` r.remind 1m to to school")
-  .setFooter("If you found a bug please report it using ?bugreport")
+  .setFooter("If you found a bug please report it using r.bugreport")
     message.channel.send(embed);
 }
 module.exports.help = {
