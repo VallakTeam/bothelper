@@ -89,6 +89,7 @@ Member Now : ${member.guild.memberCount}\`\``)
   if(channel) return channel.send(embed)
 });
 
+
 music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
