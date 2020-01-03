@@ -23,7 +23,7 @@ setInterval(function() {
 module.exports.run = async (bot, message, args) => {
     message.channel.send(`= STATISTICS =
 • Bot        :: ${bot.user.tag}
-• Developer  :: MD. Jamie#2767
+• Developer  :: Rakan Aditya Official#6073
 • Cpu Usage  :: ${cpu}
 • Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
 • Uptime     :: ${upDays} Day(s), ${upHours} Hour(s), ${upMins} Minute(s) and ${upSecs} Second(s)
