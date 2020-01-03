@@ -16,13 +16,11 @@ module.exports.run = async (bot, message, args) => {
     }
     }
     let embed = new Djs.RichEmbed()
-    .setAuthor('Evaluasi')
+    .setAuthor('Cmd Avatar')
     .setColor('WHITE')
-    .addField('📥 Masuk', `\`\`\`js\n${codein}\`\`\``)
-    message.channel.send(embed).then(msg => msg.react('✅'))
-message.channel.send(embed);
-}
-
-module.exports.help = {
-  name: "dev"
-}
+    .addField(`'📥 Masuk' `,`[\`klik disini\`](https://pastebin.com/raw/fDaJx8pK)`)//code nya gw mau ganti menjadi link pastebin
+message.channel.send(embed).then(msg => msg.react('✅'))
+  } catch (e) {
+    message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))
+  }
+  }
