@@ -20,9 +20,28 @@ setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
-music.user.setActivity('r.help | invite.js', {
-    type: 'WATCHING'
-}).catch(console.error);
+music.on("ready", function() {
+  console.log(`${music.user.tag} has started!`);
+  setInterval(async () => {
+    const statuslist = [
+      `r.help | Adit Bot`,
+      `r.dev | ON DEVELOPMENT`
+    ];
+    const random = Math.floor(Math.random() * statuslist.length);
+    try {
+      await music.user.setPresence({
+        game: {
+          name: `${statuslist[random]}`,
+          type: "STREAMING",
+          url: "https://www.twitch.tv/rakanaditya"
+        },
+        status: "idle"
+      });
+    } catch (error) {
+      console.log("status error");
+    }
+  }, 2000);
+});
 
 music.on('message', async message => {
 
