@@ -40,7 +40,7 @@ Your Identify
 \`\`\`Username : ${member.user.username}
 Tag : ${member.user.tag}
 Discrim : ${member.user.discriminator}
-Member now : {member.guild.memberCount}\`\`\``)
+Member now : ${member.guild.memberCount}\`\`\``)
   .setColor("RANDOM")
   if(channel) return channel.send(embed)
 });
