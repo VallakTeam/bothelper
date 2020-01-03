@@ -11,6 +11,6 @@ let commands = new Discord.RichEmbed()
 .addField(`---- **help command** --- `,`\`r.main\`  \`r.mod\` \`r.time\` \`r.statistics\` \`r.jadwalsholat <kota>\` \`r.music\` \`r.dev\``)
 .addField(`---- bot invite --- `,`[\`klik disini\`](https://discordapp.com/oauth2/authorize?client_id=657351969253490699&permissions=8&scope=bot)`)
 
-message.channel.send(commands).then(message => message.react('✔'))
+message.channel.send(commands).then(message => message.react('?'))
 
 }

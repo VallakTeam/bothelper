@@ -1,36 +1,28 @@
-const Discord = require("discord.js");
-
+let Djs = require('discord.js')
+var os = require('os')
+let token 
 module.exports.run = async (bot, message, args) => {
- let embed = new Discord.RichEmbed()
-  .setTitle("Evaluation")
-  .setDescription("Maaf, itu `eval` perintah hanya dapat dieksekusi oleh Pengembang.")
-  .setColor("#cdf785");
-  if(message.author.id !== '602036985774997507') return message.channel.send(embed);
-  function clean(text) {
-  if (typeof(text) === "string")
-    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-  else
-      return text;
-}try {
-      const code = args.join(" ");
-      let evaled = eval(code);
-      let rawEvaled = evaled;
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-  let embed = new Discord.RichEmbed()
-      .setTitle(`Evaluated in ${Math.round(bot.ping)}ms`)
-      .addField(":inbox_tray: Input", `\`\`\`js\n${code}\n\`\`\``)
-      .addField(":outbox_tray: Output", `\`\`\`js\n${clean(evaled).replace(bot.token, "Are you retarded?")}\n\`\`\``)
-      .addField('Type', `\`\`\`xl\n${(typeof rawEvaled).substr(0, 1).toUpperCase() + (typeof rawEvaled).substr(1)}\n\`\`\``)
-      .setColor('GREEN');
-      message.channel.send({embed});
-    } catch (err) {
-      
-      message.channel.send(`\`ERROR\` \`\`\`js\n${clean(err)}\n\`\`\``);
+    if(message.author.id !== "602036985774997507" && message.author.id !== "657351969253490699") return message.channel.send("Kamu tidak bisa menggunakan command ini!, karena kamu bukan developer!")
+    let msg = message
+    try {
+    let codein = args.slice(0).join(' ');
+    let code = eval(codein);
+    if (typeof code !== 'string')
+      code = require('util').inspect(code, { depth: 0 });
+    if(code.includes(process.env.TOKEN)) {
+      code = code.replace(bot.token, token[Math.floor(Math.random() * token.length)])
+    if(code.includes(process.env.TOKEN)) {
+        code = code.replace(bot.token, token[Math.floor(Math.random() * token.length)])
     }
-}
+    }
+    let embed = new Djs.RichEmbed()
+    .setAuthor('Evaluasi')
+    .setColor('WHITE')
+    .addField('📥 Masuk', `\`\`\`js\n${codein}\`\`\``) 
+    .addField('📤 Keluarnya', `\`\`\`js\n${code}\n\`\`\``)
+    message.channel.send(embed).then(msg => msg.react('✅'))
+  } catch (e) {
+    message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))
+  }
+  }
 
-module.exports.help = {
-  name: "eval"
-}
