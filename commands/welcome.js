@@ -1,5 +1,15 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const http = require("https");
+const express = require("express");
+const app = express();
+
+app.get("/", (request, response) => {
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInternal(() => {
+  http.get
 
 client.on("guildMemberAdd", member => {
   var channel = member.guild.channels.find(ch => ch.id === "662433738981900338")
@@ -30,6 +40,8 @@ Your Identify
 Tag : ${member.user.tag}
 Discrim : ${member.user.discriminator}
 Member now : {member.guild.memberCount}\`\`\``)
-  .setC
+  .setColor("RANDOM")
   if(channel) return channel.send(embed)
 });
+
+client.login("NjU3MzUxOTY5MjUzNDkwNjk5.Xgp17w.nyWBwlqGOAwSAmKHcgPmBibGByM")
