@@ -1,3 +1,6 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
 bot.on("guildMemberAdd", member => {
   const channel = member.guild.channels
     .find(ch => ch.id === "662433738981900338");
@@ -14,4 +17,6 @@ bot.on("guildMemberAdd", member => {
   channel.send(
     `**Welcome To Server .....**`
   );
-}); 
+});
+
+client.login("NjU3MzUxOTY5MjUzNDkwNjk5.Xgp17w.nyWBwlqGOAwSAmKHcgPmBibGByM")
