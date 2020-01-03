@@ -26,7 +26,8 @@ music.on("ready", function() {
     const statuslist = [
       `r.help | Adit Bot`,
       `r.dev | ON DEVELOPMENT`,
-      `.addField("Server", bot.guilds.size)`
+      `${music.guilds.size.toLocaleString()}`,
+      `${music.username}`
     ];
     const random = Math.floor(Math.random() * statuslist.length);
     try {
