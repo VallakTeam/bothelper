@@ -16,9 +16,9 @@ module.exports.run = async (bot, message, args) => {
     }
     }
     let embed = new Djs.RichEmbed()
-    .setAuthor('Cmd ')
+    .setAuthor('Cmd bot stats')
     .setColor('WHITE')
-    .addField(`'📥 Masuk' `,`[\`klik disini\`](https://pastebin.com/raw/fDaJx8pK)`)//code nya gw mau ganti menjadi link pastebin
+    .addField(`'📥 Masuk' `,`[\`Get Script  \`](https://pastebin.com/raw/d7LKuGeX)`)//click link nya
 message.channel.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))
