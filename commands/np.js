@@ -92,5 +92,5 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 exports.help = {
   name: "np",
   description: "Shows the music that is playing",
-  usage: "ms!np"
+  usage: "np"
 }

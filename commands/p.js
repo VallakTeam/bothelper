@@ -291,5 +291,5 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 exports.help = {
     name: "play",
     description: "Sings music to you",
-    usage: "ms!play [song-name] || [url] || [playlist-url]"
+    usage: "play [song-name] || [url] || [playlist-url]"
 }
