@@ -7,7 +7,7 @@ const Discord = require("discord.js");
 
 	const embedheads = new Discord.RichEmbed()
 	.setTitle("Coinflip")
-  .setImage(':Coin: ')
+  .setImage('https://discordemoji.com/assets/emoji/Coin.gif')
 	.setColor("#F8A61C")
 	.setDescription(`The coin landed **heads!**`);
 	message.channel.send(embedheads);
