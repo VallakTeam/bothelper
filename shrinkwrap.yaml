@@ -1,6 +1,6 @@
 dependencies:
   canvas: 2.6.1
-  canvas-constructor: 1.1.2
+  canvas-constructor: 3.1.0
   cheerio: 0.22.0
   child_process: 1.0.2
   common-tags: 1.8.0
@@ -12,7 +12,7 @@ dependencies:
   express: 4.17.1
   ffmpeg: 0.0.4
   fs: 0.0.2
-  fs-nextra: 0.3.8
+  fs-nextra: 0.4.7
   https: 1.0.0
   kitsu.js: 2.0.0
   math-expression-evaluator: 1.2.17
@@ -20,10 +20,10 @@ dependencies:
   moment: 2.24.0
   moment-duration-format: 2.3.2
   ms: 2.1.2
-  nekos.life: 1.1.5
+  nekos.life: 2.0.4
   node-fetch: 2.6.0
-  node-gyp: 3.8.0
-  node-opus: 0.2.9
+  node-gyp: 6.0.1
+  node-opus: 0.3.3
   opusscript: 0.0.7
   os: 0.1.1
   quick.db: 6.3.2
@@ -33,9 +33,9 @@ dependencies:
   request: 2.88.0
   simple-youtube-api: 5.2.1
   sqlite3: 4.1.1
-  string-similarity: 1.2.2
-  superagent: 3.8.3
-  twemoji: 11.3.0
+  string-similarity: 4.0.1
+  superagent: 5.1.3
+  twemoji: 12.1.4
   uws: 99.0.0
   weather-js: 2.0.0
   ytdl-core: 1.0.6
@@ -179,14 +179,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
-  /block-stream/0.0.9:
-    dependencies:
-      inherits: 2.0.4
-    dev: false
-    engines:
-      node: 0.4 || >=0.5.8
-    resolution:
-      integrity: sha1-E+v+d4oDIFz+A3UUgeu0szAMEmo=
   /body-parser/1.19.0:
     dependencies:
       bytes: 3.1.0
@@ -225,12 +217,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-KAOY5dZkvXQDi28JBRU+borxvCA=
-  /canvas-constructor/1.1.2:
+  /canvas-constructor/3.1.0:
     dev: false
+    engines:
+      node: '>=8.6.0'
     peerDependencies:
-      canvas: 'github:Automattic/node-canvas'
+      canvas: '*'
     resolution:
-      integrity: sha512-KNkdUmDvl1pJC/5rGRhhOAqmgZgD/4b8Z3u8ihNCXCFWZA4O8tNbXOMzvhH+TrteKUPBEQk5gWR/bhTH+WSz2g==
+      integrity: sha512-S3CIisunkG6IqDIhCecPkm+xx5iTvsum3pDH3a96Tl7uS1h1Me1dfePwBjnt83I2OqtUopZoFYtTgjYpcNV2Aw==
   /canvas/2.6.1:
     dependencies:
       nan: 2.14.0
@@ -632,6 +626,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-D9f7V0JSRwIxlRI2mjMqufDrRDnx8p+eEOz7aUM9SuvF8gsBzra0/6tbjl1m8eQHrZlYj6PxqE00hZ1SAIKPLw==
+  /env-paths/2.2.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-6u0VYSCo/OW6IoD5WCLLy9JUGARbamfSavcNXry/eu8aHVFei6CD3Sw+VGX5alea1i9pgPHW0mbu6Xj0uBh7gA==
   /escape-html/1.0.3:
     dev: false
     resolution:
@@ -707,6 +707,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
+  /fast-safe-stringify/2.0.7:
+    dev: false
+    resolution:
+      integrity: sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
   /ffmpeg/0.0.4:
     dependencies:
       when: 3.7.8
@@ -745,16 +749,16 @@ packages:
       node: '>= 0.12'
     resolution:
       integrity: sha512-1lLKB2Mu3aGP1Q/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7UtZ1N38rVXm+6+MEhJQ==
-  /form-data/2.5.1:
+  /form-data/3.0.0:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.25
     dev: false
     engines:
-      node: '>= 0.12'
+      node: '>= 6'
     resolution:
-      integrity: sha512-m21N3WOmEEURgk6B9GLOE4RuWOFf28Lhh9qGYeNlGq4VDXUlJy2th2slBNU8Gp8EzloYZOibZJ7t5ecIrFSjVA==
+      integrity: sha512-CKMFDglpbMi6PyN+brwB9Q/GOw0eAnsrEZDgcsH5Krhz5Od/haKHAX0NmQfha2zPPz0JpWzA7GJHGSnvCRLWsg==
   /formidable/1.2.1:
     dev: false
     resolution:
@@ -771,18 +775,28 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
+  /fs-extra/8.1.0:
+    dependencies:
+      graceful-fs: 4.2.3
+      jsonfile: 4.0.0
+      universalify: 0.1.2
+    dev: false
+    engines:
+      node: '>=6 <7 || >=8'
+    resolution:
+      integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
   /fs-minipass/1.2.7:
     dependencies:
       minipass: 2.9.0
     dev: false
     resolution:
       integrity: sha512-GWSSJGFy4e9GUeCcbIkED+bgAoFyj7XF1mV8rma3QW4NIqX9Kyx79N/PF61H5udOV3aY1IaMLs6pGbH71nlCTA==
-  /fs-nextra/0.3.8:
+  /fs-nextra/0.4.7:
     dev: false
     engines:
-      node: '>=8.5.0'
+      node: '>=10.1.0'
     resolution:
-      integrity: sha512-zHTMl89RbxuUUoGhG+Jx1Y2UkuOGnK4Q0Ibq6o/QHexhA91e0rtZf1Vo7G4iP2xdnUAnsDXvnfIa+r2Ffr29Lg==
+      integrity: sha512-N61ZytY7cF3VlPTQ+o90XK+TsdOaUPeX0cpwy5oOVbXaneSO6KorpsR2xSQr+GJbItkWzgu3h4ypSqCWjTeZKg==
   /fs.realpath/1.0.0:
     dev: false
     resolution:
@@ -791,17 +805,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-4fJE7zkzwbKmS9R5kTYGDQ9ZFPg=
-  /fstream/1.0.12:
-    dependencies:
-      graceful-fs: 4.2.3
-      inherits: 2.0.4
-      mkdirp: 0.5.1
-      rimraf: 2.7.1
-    dev: false
-    engines:
-      node: '>=0.6'
-    resolution:
-      integrity: sha512-WvJ193OHa0GHPEL+AycEJgxvBEwyfRkN1vhjca23OaPVMCaLCXTd5qAu82AjTcgP1UJmytkOKb63Ypde7raDIg==
   /gauge/2.7.4:
     dependencies:
       aproba: 1.2.0
@@ -1073,6 +1076,20 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
+  /jsonfile/4.0.0:
+    dev: false
+    optionalDependencies:
+      graceful-fs: 4.2.3
+    resolution:
+      integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  /jsonfile/5.0.0:
+    dependencies:
+      universalify: 0.1.2
+    dev: false
+    optionalDependencies:
+      graceful-fs: 4.2.3
+    resolution:
+      integrity: sha512-NQRZ5CRo74MhMMC3/3r5g2k4fjodJ/wh8MxjFbCViWKFjxrnudWSY5vomh+23ZaXzAS7J3fBZIR2dV6WbmfM0w==
   /jsprim/1.4.1:
     dependencies:
       assert-plus: 1.0.0
@@ -1105,10 +1122,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-0JF4cW/+pN3p5ft7N/bwgCJ0WAw=
-  /lodash.every/4.6.0:
-    dev: false
-    resolution:
-      integrity: sha1-64mYS+vENkJ5uzrvu9HKGb+mxqc=
   /lodash.filter/4.6.0:
     dev: false
     resolution:
@@ -1117,10 +1130,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8=
-  /lodash.flattendeep/4.4.0:
-    dev: false
-    resolution:
-      integrity: sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
   /lodash.foreach/4.5.0:
     dev: false
     resolution:
@@ -1133,10 +1142,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-dx7Hg540c9nEzeKLGTlMNWL09tM=
-  /lodash.maxby/4.6.0:
-    dev: false
-    resolution:
-      integrity: sha1-CCJABo88eiJ6oAqDgOTzjPB4bj0=
   /lodash.merge/4.6.2:
     dev: false
     resolution:
@@ -1231,6 +1236,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
+  /mime/2.4.4:
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-LRxmNwziLPT828z+4YkNzloCFC2YM4wrB99k+AV5ZbEyfGNWfG8SO1FUXLmLDBSo89NrJZ4DIWeLjy1CHGhMGA==
   /mimic-response/2.0.0:
     dev: false
     engines:
@@ -1328,10 +1340,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
-  /nekos.life/1.1.5:
+  /nekos.life/2.0.4:
     dev: false
     resolution:
-      integrity: sha512-The5DNnetzjkahFkXSXZxIVsU8NjabCp757VHWjMPBc8zITjVqfuCzJ1LBRpxXYsGUV3BmaspLZcV5LH7zmKjQ==
+      integrity: sha512-WNY7jj7XHQLuORep9RbqJP8NwwfmPaQ6mmpHppJhtXkGiIx6aC54cx1P66pTdiK84HZvF82+lRsy4NBq0mEg3A==
   /node-fetch/1.7.3:
     dependencies:
       encoding: 0.1.12
@@ -1345,39 +1357,38 @@ packages:
       node: 4.x || >=6.0.0
     resolution:
       integrity: sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
-  /node-gyp/3.8.0:
+  /node-gyp/6.0.1:
     dependencies:
-      fstream: 1.0.12
+      env-paths: 2.2.0
       glob: 7.1.6
       graceful-fs: 4.2.3
       mkdirp: 0.5.1
-      nopt: 3.0.6
+      nopt: 4.0.1
       npmlog: 4.1.2
-      osenv: 0.1.5
       request: 2.88.0
       rimraf: 2.7.1
-      semver: 5.3.0
-      tar: 2.2.2
+      semver: 5.7.1
+      tar: 4.4.13
       which: 1.3.1
     dev: false
     engines:
-      node: '>= 0.8.0'
+      node: '>= 6.0.0'
     hasBin: true
     resolution:
-      integrity: sha512-3g8lYefrRRzvGeSowdJKAKyks8oUpLEd/DyPV4eMhVlhJ0aNaZqIrNUIPuEWWTAoPqyFkfGrM67MC69baqn6vA==
-  /node-opus/0.2.9:
+      integrity: sha512-udHG4hGe3Ji97AYJbJhaRwuSOuQO7KHnE4ZPH3Sox3tjRZ+bkBsDvfZ7eYA1qwD8eLWr//193x806ss3HFTPRw==
+  /node-opus/0.3.3:
     dependencies:
       bindings: 1.2.1
       commander: 2.20.3
       nan: 2.14.0
     dev: false
     engines:
-      node: '>=0.10.0'
+      node: '>=5.10.0'
     optionalDependencies:
       ogg-packet: 1.0.1
     requiresBuild: true
     resolution:
-      integrity: sha512-+IIOdav5D7vHsuLDNk55t17kK2s6c1w4DbfKw8UQxZ635n+AO/SqDE3RpuO3PZKqpWjPtL/chzYZNVxz8/4TUQ==
+      integrity: sha512-ZQniA8iJ6y/qOTmW6eyzM9m8odt4CIGV0NM9/U03/pYLhGyxy18QXO25WfrWd8XsUYx57tnxll2xxj54CN08uQ==
   /node-pre-gyp/0.11.0:
     dependencies:
       detect-libc: 1.0.3
@@ -1394,13 +1405,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-TwWAOZb0j7e9eGaf9esRx3ZcLaE5tQ2lvYy1pb5IAaG1a2e2Kv5Lms1Y4hpj+ciXJRofIxxlt5haeQ/2ANeE0Q==
-  /nopt/3.0.6:
-    dependencies:
-      abbrev: 1.1.1
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha1-xkZdvwirzU2zWTF/eaxopkayj/k=
   /nopt/4.0.1:
     dependencies:
       abbrev: 1.1.1
@@ -1751,16 +1755,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-  /semver/5.3.0:
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha1-myzl094C0XxgEq0yaqa00M9U+U8=
   /semver/5.7.1:
     dev: false
     hasBin: true
     resolution:
       integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
+  /semver/6.3.0:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
   /send/0.17.1:
     dependencies:
       debug: 2.6.9
@@ -1914,16 +1918,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-HmdMgpXOKd3Zd4tuTLOqXnVEhAM=
-  /string-similarity/1.2.2:
-    dependencies:
-      lodash.every: 4.6.0
-      lodash.flattendeep: 4.4.0
-      lodash.foreach: 4.5.0
-      lodash.map: 4.6.0
-      lodash.maxby: 4.6.0
+  /string-similarity/4.0.1:
     dev: false
     resolution:
-      integrity: sha512-IoHUjcw3Srl8nsPlW04U3qwWPk3oG2ffLM0tN853d/E/JlIvcmZmDY2Kz5HzKp4lEi2T7QD7Zuvjq/1rDw+XcQ==
+      integrity: sha512-v36MJzloekKVvKAsYi6O/qpn2mIuvwEFIT9Gx3yg4spkNjXYsk7yxc37g4ZTyMVIBvt/9PZGxnqEtme8XHK+Mw==
   /string-width/1.0.2:
     dependencies:
       code-point-at: 1.1.0
@@ -1983,32 +1981,24 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
-  /superagent/3.8.3:
+  /superagent/5.1.3:
     dependencies:
       component-emitter: 1.3.0
       cookiejar: 2.1.2
-      debug: 3.2.6
-      extend: 3.0.2
-      form-data: 2.5.1
+      debug: 4.1.1
+      fast-safe-stringify: 2.0.7
+      form-data: 3.0.0
       formidable: 1.2.1
       methods: 1.1.2
-      mime: 1.6.0
+      mime: 2.4.4
       qs: 6.9.1
-      readable-stream: 2.3.6
-    deprecated: 'Please note that v5.0.1+ of superagent removes User-Agent header by default, therefore you may need to add it yourself (e.g. GitHub blocks requests without a User-Agent header).  This notice will go away with v5.0.2+ once it is released.'
+      readable-stream: 3.4.0
+      semver: 6.3.0
     dev: false
     engines:
-      node: '>= 4.0'
+      node: '>= 7.0.0'
     resolution:
-      integrity: sha512-GLQtLMCoEIK4eDv6OGtkOoSMt3D+oq0y3dsxMuYuDvaNUvuT8eFBuLmfR0iYYzHC1e8hpzC6ZsxbuP6DIalMFA==
-  /tar/2.2.2:
-    dependencies:
-      block-stream: 0.0.9
-      fstream: 1.0.12
-      inherits: 2.0.4
-    dev: false
-    resolution:
-      integrity: sha512-FCEhQ/4rE1zYv9rYXJw/msRqsnmlje5jHP6huWeBZ704jUTy02c5AZyWujpMR1ax6mVw9NyJMfuK2CMDWVIfgA==
+      integrity: sha512-2bno1Nb4uvZPECTJ7NDYlae6Q8LLQoZZZ9Vumd346jU1UGVkNC/lQI42jHwtrqVoepyt0QxNKFty01IRKgD4CA==
   /tar/4.4.13:
     dependencies:
       chownr: 1.1.3
@@ -2062,10 +2052,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-kcoMoKTPYnoeS50tzoqjPY3Uv9axeuuFAZY9M/9zFnhoVvRfxz9K29IMPD7jGmt2c8SW7i3gT9WqDl2+nV7p4A==
-  /twemoji/11.3.0:
+  /twemoji-parser/12.1.1:
     dev: false
     resolution:
-      integrity: sha512-xN/vlR6+gDmfjt6LInAqwGAv3Agwrmzx5TD1jEFwKS19IOGDrX0/3OB8GP1wUYPVIdkaer5hw6qd+52jzvz0Lg==
+      integrity: sha512-XFUB4ReEvPbNPtiuyo/+crM4RldYbRRAhyE7Hw6EnfBdXECGydw7a49EGADayRvaeierP/m4DSv/OZQObh0LGA==
+  /twemoji/12.1.4:
+    dependencies:
+      fs-extra: 8.1.0
+      jsonfile: 5.0.0
+      twemoji-parser: 12.1.1
+      universalify: 0.1.2
+    dev: false
+    resolution:
+      integrity: sha512-e37lUlVijmABF7wPCc09s1kKj3hcpzU8KL5zw2bBDIXOtOr4luLF+ODJaEqca8dZPmLR5ezrJYI93nhPovKBiQ==
   /type-is/1.6.18:
     dependencies:
       media-typer: 0.3.0
@@ -2089,6 +2088,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-zj4iTIJCzTOg53sNcYDXfmti0MQ=
+  /universalify/0.1.2:
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
   /unpipe/1.0.0:
     dev: false
     engines:
@@ -2251,42 +2256,42 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   canvas: ^2.6.1
-  canvas-constructor: ^1.0.1
+  canvas-constructor: ^3.1.0
   cheerio: ^0.22.0
   child_process: ^1.0.2
   common-tags: ^1.8.0
-  cowsay: ^1.3.1
+  cowsay: ^1.4.0
   cpu-stat: ^2.0.1
   discord: ^0.8.2
   discord-money: ^0.2.0
-  discord.js: ^11.3.2
+  discord.js: ^11.5.1
   express: ^4.17.1
   ffmpeg: ^0.0.4
   fs: ^0.0.2
-  fs-nextra: ^0.3.5
+  fs-nextra: ^0.4.7
   https: ^1.0.0
   kitsu.js: ^2.0.0
   math-expression-evaluator: ^1.2.17
-  memejs: ^1.0.7
-  moment: ^2.22.2
+  memejs: ^1.1.1
+  moment: ^2.24.0
   moment-duration-format: ^2.2.2
-  ms: ^2.1.1
-  nekos.life: ^1.0.5
+  ms: ^2.1.2
+  nekos.life: ^2.0.4
   node-fetch: ^2.6.0
-  node-gyp: ^3.6.2
-  node-opus: ^0.2.7
+  node-gyp: ^6.0.1
+  node-opus: ^0.3.2
   opusscript: ^0.0.7
   os: ^0.1.1
   quick.db: ^6.3.2
-  quick.hook: ^1.4.0
+  quick.hook: ^1.5.1
   random-puppy: ^1.1.0
   relevant-urban: ^2.0.0
   request: ^2.88.0
   simple-youtube-api: ^5.2.1
-  sqlite3: ^4.0.1
-  string-similarity: ^1.2.0
-  superagent: ^3.8.3
-  twemoji: ^11.0.0
+  sqlite3: ^4.1.1
+  string-similarity: ^4.0.0
+  superagent: ^5.1.3
+  twemoji: ^12.1.3
   uws: ^99.0.0
   weather-js: ^2.0.0
-  ytdl-core: ^1.0.4
+  ytdl-core: ^1.0.6
