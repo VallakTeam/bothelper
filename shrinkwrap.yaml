@@ -27,6 +27,7 @@ dependencies:
   node-superfetch: 0.1.9
   opusscript: 0.0.7
   os: 0.1.1
+  parse-ms: 2.1.0
   quick.db: 6.3.2
   quick.hook: 1.5.1
   random-puppy: 1.1.0
@@ -1540,6 +1541,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-0CWcCECdMVc2Rw3U5w9ZjqX6ga6ubk1xDVKxtBQPK7wis/0F2r9T6k4ydGYhecl7YUBxBVxhL5oisPsNxAPe2g==
+  /parse-ms/2.1.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-kHt7kzLoS9VBZfUsiKjv43mr91ea+U05EyKkEtqp7vNbHxmaVuEqN7XxeEVnGrMtYOAxGrDElSi96K7EgO1zCA==
   /parseqs/0.0.5:
     dependencies:
       better-assert: 1.0.2
@@ -2303,6 +2310,7 @@ specifiers:
   node-superfetch: ^0.1.9
   opusscript: ^0.0.7
   os: ^0.1.1
+  parse-ms: 2.1.0
   quick.db: ^6.3.2
   quick.hook: ^1.5.1
   random-puppy: ^1.1.0

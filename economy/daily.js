@@ -21,6 +21,7 @@ exports.run = async (client, message, args, tools) => {
         message.channel.send(`You already collected this, please wait **${timeObj.hours}h ${timeObj.minutes}m**!`);
 
     } else {
+        .setTitle(`daily`)
         message.channel.send(`Successfully collected $${amount}`);
 
 
