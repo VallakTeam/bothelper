@@ -15,7 +15,7 @@ exports.run = async (client, message, args, tools) => {
     if (balance === null) balance = 0;
 
 
-    message.channel.send(`$user.username} - Balance: $${balance}`);
+    message.channel.send(`${user.username} - Balance: $${balance}`);
 
 
 
