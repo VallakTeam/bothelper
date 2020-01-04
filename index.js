@@ -117,22 +117,6 @@ Member Now : ${member.guild.memberCount}\`\``)
 app.get("/", (request, response) => {
   response.sendStatus(200);
 });
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
-
-const moment = require("moment-timezone");
-const bot = new Discord.Client({ disableEveryone: true })
-music.on("ready", async () => {
-  function Jem() {
-    let kalCH = music.channels.get("663041238903291925");
-    let wibCH = music.channels.get("663041238903291925");
-    let kalender = moment().utcoffset('+0700').locale('id').format('dddd, D/MMM/YYYY')
-    wibCH.setName(`@ ${kalender}`)
-    wibCH.setName(`@ ${wib} WIB`)
-  };setInternal (jem, 10000)
-});
 
 
 music.login(process.env.TOKEN);
