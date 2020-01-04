@@ -38,6 +38,5 @@ music.on('message', message => {
                   message.channel.send(`You sent ${messages} messages, so you leveled up! You are now level ${o.value}`)
               })
           }
-})
-
-});
+      })
+music.login(process.env.TOKEN);
