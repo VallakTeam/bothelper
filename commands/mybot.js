@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Channel", bot.channels.size)
   .addField("User", bot.users.size)
   .addField("**Bot**", `${bot.user.tag}`)
+  .addField("Online Players", bot.user.size)
   .setColor("RANDOM");
   message.channel.send(embed);
 }
