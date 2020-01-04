@@ -18,4 +18,4 @@ module.exports = async (client, message) => {
 
 
 
-  if (data) = await client.db.get(`SELECT * where guildid * xpsystem WHERE AND user
+  
