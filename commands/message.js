@@ -4,11 +4,11 @@ const fs = require('fs');
 const db = require('quick.db');
 
 
-const func = require('./function.js');
+const func = require('./functions.js');
 
 
 
-const commands = JSONparse(fs.readFileSync('Strotage/commands.json', 'utf8'));
+const commands = JSON.parse(fs.readFileSync('Strotage/commands.json', 'utf8'));
 
 const serverPrefixes = JSON.parse(fs.readFileSync('Strotage/serverPrefixes.json', 'utf8'))
 
@@ -16,7 +16,7 @@ const serverPrefixes = JSON.parse(fs.readFileSync('Strotage/serverPrefixes.json'
 const prefix = 'r.'
 
 
-music.on('message', message => {
+bot.on('message', message => {
 
 
       let msg = message.content.toUpperCase();
