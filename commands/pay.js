@@ -17,11 +17,11 @@ exports.run = async (client, message, args, tools) => {
 
 
     let targetBalance = await db.fetch(`userBalance_${targetMember.id}`),
-        selfBalance = await  db.fetch(`userBalance_${message.authorr.id}`);
+        selfBalance = await  db.fetch(`userBalance_${message.author.id}`);
 
 
     if (targetBalance === null) targetBalance = 0;
-    if (selfBalance === null) selfBalance = 0;
+    if (selfBalance === null) selfBalance = 0;  
 
 
     if (amount > selfBalance) return message.channel.send(`**Sorry, you don't have enough money!**`);
@@ -31,5 +31,5 @@ exports.run = async (client, message, args, tools) => {
     db.subtract(`userBalance_${message.author.id}`, amount);
 
 
-    message.channel.send(`**Successfully sent $${amount} to ${targetMember.user.tag}!**`);
+    message.channel.send(`**Successfully sent $${amount} to ${targetMember.user.username}!**`);
 }
