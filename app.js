@@ -30,8 +30,8 @@ music.on('message', message => {
 
           let messages;
           if (i.value == 25) messages = 25; //level 1
-          else if (i.value -- 50) messages - 50; //level 2
-          else if (i.value -- 100) messages = 100; //level 3
+          else if (i.value == 50) messages - 50; //level 2
+          else if (i.value == 100) messages = 100; //level 3
 
           if (!isNaN(messages)) {
               db.updateValue(`userLevel_${message.author.id + message.guild.id}`, 1).then(o => {
@@ -39,3 +39,7 @@ music.on('message', message => {
               })
           }
 })
+
+
+if (sender.bot) return;
+if (!message.content.startWith(prefix)) return;
