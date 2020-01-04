@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+var os = require('os')
 const db = require('quick.db');
 
 
@@ -30,6 +31,9 @@ exports.run = async (client, message, args, tools) => {
     db.add(`userBalance_${targetMember.id}`, amount);
     db.subtract(`userBalance_${message.author.id}`, amount);
 
-
-    message.channel.send(`**Successfully sent $${amount} to ${targetMember.user.username}!**`);
+    let embed = new Discord.RichEmbed()
+    .setAuthor('Successfully sent')
+    .setColor('WHITE')
+    .addField(`✉ Masuk duit `,`[\`${amount}\`](kepada ${targetMember.username}!**`);
+    message.channel.send(embed).then(msg => msg.react('✅'))
 }
