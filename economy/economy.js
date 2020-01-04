@@ -12,4 +12,8 @@ client.on('message', message => {
    //commands
 
    //ping
-   if (message.content.toUpperCase() === '${prefox}'
+   if (message.content.toUpperCase() === '${prefix}PING') {
+       message.channel.send('pong!');
+
+
+   if
