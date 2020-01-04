@@ -13,4 +13,15 @@ exports.run = async (client, message, args, tools) => {
 
 
 
-    if (isNaN)(amount)) return 
+    if (isNaN(amount)) return message.channel(`**Please define an amout!**`)
+
+
+    let targetBalance = await db.fetch(`userBalance_${targetMember.id}`),
+        selfBalance = await  db.fetch(`userBalance_${message.authorr.id}`);
+
+
+    if (targetBalance === null) targetBalance = 0;
+    if (selfBalance === null) selfBalance = 0;
+
+
+    if (amount > selfBalance) return
