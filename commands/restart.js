@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) =>{
   let embed = new Discord.RichEmbed()
   .setTitle("Restart")
   .setDescription("Sorry, the `restart` command can only be executed by the Developer.")
-  .setColor("#cdf785");
+  .setColor("RANDOM");
   if(message.author.id !== '602036985774997507') return message.channel.send(embed);
   
 message.channel.send(`Restarted in ${Math.floor(bot.ping)}ms`).then(() =>{
