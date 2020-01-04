@@ -35,8 +35,9 @@ music.on('message', message => {
 
           if (!isNaN(messages)) {
               db.updateValue(`userLevel_${message.author.id + message.guild.id}`, 1).then(o => {
-                  message.channel.send(`You sent ${messages} messages, so you leveled up! You are now level ${o.value}`)
+                  message.channel.send`You sent ${messages} messages, so you leveled up! You are now level ${o.value}`
               })
           }
       })
-music.login(process.env.TOKEN);
+
+});
