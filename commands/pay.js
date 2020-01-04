@@ -34,6 +34,6 @@ exports.run = async (client, message, args, tools) => {
     let embed = new Discord.RichEmbed()
     .setAuthor('Successfully sent')
     .setColor('WHITE')
-    .addField(`✉ Masuk duit `,`[\`${amount}\`](kepada ${targetMember.username}!**`);
+    .addField(`✉ Masuk duit `,`[\`${amount}\`]**kepada ${targetMember.user.username}!**`);
     message.channel.send(embed).then(msg => msg.react('✅'))
 }
