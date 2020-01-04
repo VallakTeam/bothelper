@@ -24,4 +24,12 @@ exports.run = async (client, message, args, tools) => {
     if (selfBalance === null) selfBalance = 0;
 
 
-    if (amount > selfBalance) return
+    if (amount > selfBalance) return message.channel.send(`**Sorry, you don't have enough money!**`);
+
+
+    db.add(`userBalance_${targetMember.id}`, amount);
+    db.subtract(`userBalance_${message.author.id}`, amount);
+
+
+    message.channel.send(`**Successfully sent $${amount} to ${targetMember.user.tag}!**`);
+}
