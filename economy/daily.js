@@ -1,3 +1,4 @@
+const Discord = require('discord.js')
 const db = require('quick.db'),
       ms = require('parse-ms');
 
@@ -21,7 +22,11 @@ exports.run = async (client, message, args, tools) => {
         message.channel.send(`You already collected this, please wait **${timeObj.hours}h ${timeObj.minutes}m**!`);
 
     } else {
-        .setTitle(`daily`)
+        
+        let embed = new Discord.RichEmbed()
+        .
+		    embed.addField('daily', "Day Reward")
+        [message.author.id] = {"reason": true};
         message.channel.send(`Successfully collected $${amount}`);
 
 
