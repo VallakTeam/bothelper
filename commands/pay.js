@@ -5,15 +5,15 @@ const db = require('quick.db');
 exports.run = async (client, message, args, tools) => {
 
 
-    if (!message.mention.members.first()) return message.channel.send(`**Please mention a user!**`);
+    if (!message.mentions.members.first()) return message.channel.send(`**Please mention a user!**`);
 
 
-    let targetMember = message.mention.member.first(),
+    let targetMember = message.mentions.member.first(),
         amount = parseInt(args.join(' ').replace(targetMember, ''));
 
 
 
-    if (isNoN(amount)) return message.channel.send(`**Please define an amount!**`);
+    if (isNaN(amount)) return message.channel.send(`**Please define an amount!**`);
 
 
     let targetBalance = await db.fetch(`userBalance_${targetMember.id}`),
