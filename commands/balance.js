@@ -9,13 +9,14 @@ exports.run = async (client, message, args, tools) => {
 
 
 
-    let balance = await db.fetch(`userbalance_${user.id}`);
+    let balance = await db.fetch(`userBalance_${user.id}`);
 
 
     if (balance === null) balance = 0;
 
-
-    message.channel.send(`${user.username}☛**Kamu Memiliki Saldo**$${balance}`);
+    let embed = new Discord.RichEmbed()
+    
+    message.channel.send(`${user.username} ➨ Balance: $${balance}`);
 
 
 
