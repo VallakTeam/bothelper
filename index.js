@@ -24,8 +24,7 @@ music.on("ready", function() {
   console.log(`${music.user.tag} has started!`);
   setInterval(async () => {
     const statuslist = [
-      `r.help | Adit Bot!`,
-      `r.dev | ON DEVELOPMENT!`,
+      `r.help | Adit Bot`,
       `user! | ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
       `server! | ${music.guilds.size.toLocaleString()}`,
       `channel! | ${music.channels.size.toLocaleString()}`
