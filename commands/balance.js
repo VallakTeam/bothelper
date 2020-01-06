@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
-const db = require('quick.db');
-
+const db = require('quick.db'),
+      ms = require('parse-ms');
 exports.run = async (client, message, args, tools) => {
 
 
@@ -9,16 +9,13 @@ exports.run = async (client, message, args, tools) => {
 
 
 
-    let balance = await db.fetch(`userBalance_${user.id}`);
+    let balance = await db.fetch(`userbalance_${user.id}`);
 
 
     if (balance === null) balance = 0;
 
-    const embed = new Discord.RichEmbed()
-    .setAuthor('Balance')
-    .setColor('RANDOM')
-    .addField(`📥 Masuk `,`[\`Get Script  \`](https://pastebin.com/raw/d7LKuGeX)`)
-    message.channel.send(`${user.username} - Balance: $${balance}`);
+
+    message.channel.send(`${user.username}☛**Kamu Memiliki Saldo**$${balance}`);
 
 
 

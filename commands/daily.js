@@ -27,7 +27,7 @@ exports.run = async (client, message, args, tools) => {
 
 
         db.set(`lastDaily_${message.author.id}`, Date.now());
-        db.add(`userBalance_${message.author.id}`, 250);
+        db.add(`userBalance_${message.author.id}`, 250); 350
 
 
 
