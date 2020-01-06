@@ -1,37 +1,25 @@
 const Discord = require('discord.js')
-const db = require('quick.db'),
-      ms = require('parse-ms');
+const db = require('quick.db')
+const ms = require('parse-ms')
 
+exports.run = async (client, message, args) => {
 
-exports.run = async (client, message, args, tools) => {
+    let timeout = 86400000
+    let amount = 250
 
+    let daily = await db.fetch(`daily_${message.guild.id}_${message.author.id}`);
 
-    let cooldown = 8.64e+7,
-        amount = 250;
+    if (daily !== null && timeout - (Date.now() - daily) > 0) {
+        let time = ms(timeout - (Date.now() - daily));
 
-
-    let lastDaily = await db.fetch(`lastDaily_${message.author.id}`);
-
-
-
-    if (lastDaily !== null && cooldown - (Date.now() - lastDaily) > 0) {
-        let timeObj = ms(cooldown - (Date.now() - lastDaily));
-
-
-
-        message.channel.send(`You already collected this, please wait **${timeObj.hours}h ${timeObj.minutes}m**!`);
-
+        message.channel.send(`Anda telah mengumpulkan hadiah harian Anda, Anda dapat kembali dan mengambilnya **${time.hours}h ${time.minutes}m ${time.seconds}s**!`)
     } else {
         
-         
         message.channel.send(`Successfully collected $${amount}`);
       
-
-        db.set(`lastDaily_${message.author.id}`, Date.now());
-        db.add(`userBalance_${message.author.id}`, 250);
-
-
-
-
+    db.add(`m_${message.guild.id}_${message.author.id}`, amount)
+    db.set(`daily_${message.guild.id}_${message.author.id}`, Date.now())
+        
     }
+
 }
