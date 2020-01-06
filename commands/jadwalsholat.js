@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
         const daerah = args.join(" ");
   
         if (!daerah) {
-            return message.channel.send("Usage: /jadwalsholat <kota>")
+            return message.channel.send("Usage: r.jadwalsholat <kota>")
                 .then(m => m.delete(5000));
         }
 

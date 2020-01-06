@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   let embed = new Discord.RichEmbed()
-    .setTitle("main Commands")
+    .setTitle("economy Commands")
   .setAuthor(`${bot.user.tag}`, bot.user.displayAvatarURL)
     .setThumbnail(bot.user.displayAvatarURL)
     .addField("r.daily","Get daily money.")
