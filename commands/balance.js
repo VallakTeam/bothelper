@@ -14,7 +14,10 @@ exports.run = async (client, message, args, tools) => {
 
     if (balance === null) balance = 0;
 
-
+    const embed = new Discord.RichEmbed()
+    .setAuthor('Balance')
+    .setColor('RANDOM')
+    .addField(`📥 Masuk `,`[\`Get Script  \`](https://pastebin.com/raw/d7LKuGeX)`)
     message.channel.send(`${user.username} - Balance: $${balance}`);
 
 

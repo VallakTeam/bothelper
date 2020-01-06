@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
     .setAuthor('Cmd Avatar')
     .setColor('WHITE')
-    .addField(`'📥 Masuk' `,`[\`Get Script\`](https://pastebin.com/raw/fDaJx8pK)`)//click link nya
+    .addField(`📥 Masuk `,`[\`Get Script  \`](https://pastebin.com/raw/fDaJx8pK)`)//click link nya
 message.channel.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))
