@@ -14,8 +14,7 @@ exports.run = async (client, message, args, tools) => {
 
     if (balance === null) balance = 0;
 
-    let embed = new Discord.RichEmbed()
-    
+
     message.channel.send(`${user.username} ➨ Balance: $${balance}`);
 
 
