@@ -23,10 +23,12 @@ exports.run = async (client, message, args, tools) => {
 
     } else {
         
-        const embed = new Discord.RichEmbed()
-        .setAuthor('Daily harian')
-        (`📥 masuk `,`[\`Get Script  \`](https://pastebin.com/raw/fDaJx8pK)`)
-        message.channel.send(`Successfully collected $${amount}`);
+         let embed = new Discord.RichEmbed()
+         .setTitle("Restart")
+         .setDescription("Sorry, the `restart` command can only be executed by the Developer.")
+         .setColor("RANDOM");
+         message.channel.send(`Successfully collected $${amount}`);
+      
 
 
         db.set(`lastDaily_${message.author.id}`, Date.now());
