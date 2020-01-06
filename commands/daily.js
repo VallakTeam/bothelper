@@ -17,9 +17,8 @@ exports.run = async (client, message, args) => {
         
         message.channel.send(`Successfully collected $${amount}`);
       
-    db.add(`money_${message.guild.id}_${message.author.id}`, amount)
-    db.set(`daily_${message.guild.id}_${message.author.id}`, Date.now())
-        
+        db.add(`userBalance_${message.author.id}`, 250)
+        db.set(`lastDaily_${message.author.id}`, Date.now())
     }
 
 }

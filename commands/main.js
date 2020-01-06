@@ -16,7 +16,6 @@ module.exports.run = async (bot, message, args) => {
   .addField("r.cuaca","see the weather conditions")
   .addField("r.bunny","Get random bunny pictures")
   .addField("r.daily","Get daily money.")
-  .addField("r.money","see how many money do you have.")
   .addField("r.photograph","Get random photos.")
   .addField("r.urban", "Usage: ?urban [word here]")
   .addField("r.pages", "To find out more about us!")
