@@ -23,13 +23,9 @@ exports.run = async (client, message, args, tools) => {
 
     } else {
         
-         let embed = new Discord.RichEmbed()
-         .setTitle("Restart")
-         .setDescription("Sorry, the `restart` command can only be executed by the Developer.")
-         .setColor("RANDOM");
-         message.channel.send(`Successfully collected $${amount}`);
+         
+        message.channel.send(`Successfully collected $${amount}`);
       
-
 
         db.set(`lastDaily_${message.author.id}`, Date.now());
         db.add(`userBalance_${message.author.id}`, 250);
