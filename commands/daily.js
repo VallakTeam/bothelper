@@ -1,13 +1,14 @@
-const Discord = require('discord.js')
 const db = require('quick.db')
 const ms = require('parse-ms')
+const Discord = require('discord.js')
 
 exports.run = async (client, message, args) => {
 
+
     let timeout = 86400000
     let amount = Math.floor(Math.random() * 500) + 1;
-    
-    let daily = await db.fetch(`userBalance_${message.author.id}`);
+
+    let daily = await db.fetch(`daily_${message.guild.id}_${message.author.id}`);
 
     if (daily !== null && timeout - (Date.now() - daily) > 0) {
         let time = ms(timeout - (Date.now() - daily));
@@ -19,8 +20,13 @@ exports.run = async (client, message, args) => {
     .setColor("GREEN")
     .setDescription(`**Harian Reward**`)
     .addField(`Collected`, amount)
-        message.channel.send(embed)
-        db.add(`userBalance_${message.author.id}`, amount)
-        db.set(`daily_${message.author.id}`, Date.now())
+
+    message.channel.send(embed)
+    db.add(`money_${message.guild.id}_${message.author.id}`, amount)
+    db.set(`daily_${message.guild.id}_${message.author.id}`, Date.now())
+        
     }
+
 }
+
+//udh bisa tinggal tambahin weekly atau apa gitu
