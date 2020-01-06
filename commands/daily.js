@@ -8,6 +8,7 @@ exports.run = async (client, message, args, tools) => {
 
     let cooldown = 8.64e+7,
         amount = 250;
+        amount = 350;
 
 
     let lastDaily = await db.fetch(`lastDaily_${message.author.id}`);
@@ -22,11 +23,6 @@ exports.run = async (client, message, args, tools) => {
         message.channel.send(`You already collected this, please wait **${timeObj.hours}h ${timeObj.minutes}m**!`);
 
     } else {
-        
-        let embed = new Discord.RichEmbed()
-        .
-		    embed.addField('daily', "Day Reward")
-        [message.author.id] = {"reason": true};
         message.channel.send(`Successfully collected $${amount}`);
 
 
