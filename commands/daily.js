@@ -23,6 +23,9 @@ exports.run = async (client, message, args, tools) => {
 
     } else {
         
+        const embed = new Discord.RichEmbed()
+        .setAuthor('Daily harian')
+        (`📥 masuk `,`[\`Get Script  \`](https://pastebin.com/raw/fDaJx8pK)`)
         message.channel.send(`Successfully collected $${amount}`);
 
 
