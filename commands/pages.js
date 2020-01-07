@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     
     let pages = [
-      'Our Team\n Helper: Sap-Hapling09#1646\n Dev helper: liberty_fromanother_universe#8543\n Dev helper: MD. Jamie#2767',
+      'Our Team\n Helper: Rakan Aditya#6073\n Dev helper: liberty_fromanother_universe#8543\n Dev helper: MD. Jamie#2767',
       'Owner\n Name: Rakan Aditya Official#6073', 
       'Our Discord Server\n link: coming soon', 
       'Big thx to everyone who help us!', 

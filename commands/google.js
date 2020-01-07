@@ -32,7 +32,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'r.google',
+  name: 'google',
   description: 'Googles something.',
   usage: 'google <query>'
 };
