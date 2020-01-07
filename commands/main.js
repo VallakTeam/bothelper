@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("r.yomama","funny jokes")
   .addField("r.punch","Punches a user.")
   .addField("r.user","Get user info")
-  .addField ("r.google","Google anything you want")
+  .addField ("missing","Google anything you want")
   .addField("r.pat","Pat someone")
   .addField("r.join","join your vc")
   .addField("r.cuaca","see the weather conditions")
