@@ -39,6 +39,7 @@
     "string-similarity": "^4.0.0",
     "moment-duration-format": "^2.2.2",
     "ms": "^2.1.2",
+    "google": "^2.1.0",
     "fs-nextra": "^0.4.7",
     "discord": "^0.8.2",
     "cpu-stat": "^2.0.1",

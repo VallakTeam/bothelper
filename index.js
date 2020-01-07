@@ -27,7 +27,6 @@ music.on("ready", function() {
       `r.help | Adit Bot`,
       `user! | ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
       `server! | ${music.guilds.size.toLocaleString()}`,
-      `members | ${music.channels => a + b.memberCount, 0).toLocalesString()}`,
       `channel! | ${music.channels.size.toLocaleString()}`
     ];
     const random = Math.floor(Math.random() * statuslist.length);
