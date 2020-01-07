@@ -6,9 +6,9 @@ module.exports.run = async (bot, message, args) => {
   .setAuthor(`${bot.user.tag}`, bot.user.displayAvatarURL)
     .setThumbnail(bot.user.displayAvatarURL)
     .addField("r.daily","Get daily money.")
-    .addField("r.bank","your bank.")
+    .addField("missing","your bank.")
     .addField("r.pay","send money.")
-    .addField("r.balance","your saldo.")
+    .addField("r.bal","your saldo.")
 
 message.channel.send(embed);
 }
