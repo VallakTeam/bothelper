@@ -55,6 +55,7 @@
     "nekos.life": "^2.0.4",
     "child_process": "^1.0.2",
     "parse-ms": "2.1.0",
+    "array-sort": "^1.0.0",
     "node-superfetch": "^0.1.9"
   }
 }
