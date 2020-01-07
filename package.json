@@ -56,6 +56,8 @@
     "child_process": "^1.0.2",
     "parse-ms": "2.1.0",
     "array-sort": "^1.0.0",
+    "table": "^5.4.6",
+    "snekfetch": "^3.6.4",
     "node-superfetch": "^0.1.9"
   }
 }
