@@ -29,4 +29,4 @@ exports.run = async (music, message, args) => {
 
 }
 
-//udh bisa tinggal tambahin weekly atau apa gitu
+//udh bisa tinggal tambahin weekly atau apa gitu susah bjriiir kuro :v
