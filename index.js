@@ -24,6 +24,7 @@ music.on("ready", function() {
   console.log(`${music.user.tag} has started!`);
   setInterval(async () => {
     const statuslist = [
+      `Google Chrome`,
       `r.help | Adit Bot`,
       `user! | ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
       `server! | ${music.guilds.size.toLocaleString()}`,
