@@ -1,14 +1,28 @@
+const Discord = require('discord.js');
 
-const Discord = require("discord.js");
+exports.run = (bot, message, args, tools) => {
 
-module.exports.run = async (bot, message, args) => {
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Anda harus memiliki izin ** Kelola Pesan ** untuk menggunakan perintah ini.");
 
-      if(!message.member.hasPermission("SEND_MESSAGES")) return;
-      const sayMessage = args.join(" ");
-      message.channel.send(sayMessage);
+    let argsresult
+    let mChannel = message.mentions.channels.first()
+
+    message.delete()
+    if(mChannel) {
+      argsresult = args.slice(1).join(" ")
+      mChannel.send(argsresult)
+    } else {
+        argsresult = args.join(" ")
+        message.channel.send(argsresult)
+   }
 
 }
 
-module.exports.help = {
-  name: "say"
+
+module.exports.config = {
+    name: "say",
+    description: "mengirim pesan yang dimasukkan ke saluran",
+    usage: "r.say",
+    accessableby: "Staff",
+    aliases: ["acc", "announcement"]
 }
