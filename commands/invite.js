@@ -7,3 +7,5 @@ module.exports.run = async (bot, message, args) => {
     .setColor("RANDOM")
     message.channel.send(embed)       
 }
+
+//invite wkwk copas apaan yang mana lu :v mana ada ku copas bjir
