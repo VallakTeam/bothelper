@@ -6,7 +6,7 @@ module.exports.run = function(bot, command, args, message, updateJSON, addFooter
         .setColor('#50BB7C')
 
         message.guild.roles.forEach(function(role){
-            roleEmbed.addField(role.name, role.members.size);
+            roleEmbed.addField(role.name, role.members.size);//tidak work roles nya?
         });
         addFooter(roleEmbed, bot, message, command, args);
         message.channel.send(roleEmbed);

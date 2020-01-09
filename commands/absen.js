@@ -1,1 +1,1 @@
-blm
+//blom bikin
