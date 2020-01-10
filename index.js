@@ -26,7 +26,7 @@ music.on("ready", function() {
   setInterval(async () => {
     const statuslist = [
       `Google Chrome`,
-      `aj!help | Adit Bot`,
+      `aj!help | Adit Jam Bot`,
       `user! | ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
       `server! | ${music.guilds.size.toLocaleString()}`,
       `channel! | ${music.channels.size.toLocaleString()}`,

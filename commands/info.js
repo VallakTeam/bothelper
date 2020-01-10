@@ -20,7 +20,7 @@ message.channel.send({embed: {
       },
       {
         name: "Feedback",
-        value: "[Discord Server](https://discord.gg/TmSfsNj) | [invite](https://discordapp.com/oauth2/authorize?client_id=657351969253490699&permissions=8&scope=bot)"
+        value: "[Discord Server](https://discord.gg/TmSfsNj) | [invite](https://discordapp.com/oauth2/authorize?client_id=661648558696562698&permissions=8&scope=bot)"
       }
     ],
     timestamp: new Date(),
