@@ -1,7 +1,7 @@
 {
-  "name": "adit-music",
+  "name": "adit-jam",
   "version": "v0.1.1",
-  "description": "Adit Music",
+  "description": "Adit Jam",
   "main": "node index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

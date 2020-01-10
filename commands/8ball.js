@@ -28,5 +28,5 @@ module.exports.run = async (bot, message, args) => {
   message.channel.send(ballembed);
 }
 module.exports.help = {
-  name: "r.8ball"
+  name: "aj!8ball"
 }

@@ -15,5 +15,5 @@ module.exports.run = async(bot, message, args) => {
             })
 }
 module.exports.help = {
-	name: "r.animememe"
+	name: "aj!animememe"
 }

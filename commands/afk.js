@@ -23,5 +23,5 @@ exports.run = function(client, message, args) {
 fs.writeFile("./afk.json", JSON.stringify(afk), (err) => {if (err) console.error(err);});
 }
 exports.help = {
-name:"r.afk"
+name:"aj!afk"
 }

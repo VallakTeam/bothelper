@@ -26,11 +26,11 @@ music.on("ready", function() {
   setInterval(async () => {
     const statuslist = [
       `Google Chrome`,
-      `r.help | Adit Bot`,
+      `aj!help | Adit Bot`,
       `user! | ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
       `server! | ${music.guilds.size.toLocaleString()}`,
       `channel! | ${music.channels.size.toLocaleString()}`,
-      `r.help | Jam: ${moment()
+      `aj!help | Jam: ${moment()
         .utcOffset("+0700")
         .format("HH:mm A")}`,
     ];
@@ -52,7 +52,7 @@ music.on("ready", function() {
 
 music.on('message', async message => {
 
-    let prefix = 'r.';
+    let prefix = 'aj!';
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
