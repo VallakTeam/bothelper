@@ -97,6 +97,6 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 exports.help = {
     name: "stop",
     description: "Stops the music playing and removes all the songs from the queue",
-    usage: "pr!stop",
+    usage: "stop",
     note: "Removes all the song from the queue"
 }

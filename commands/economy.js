@@ -5,10 +5,10 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("economy Commands")
   .setAuthor(`${bot.user.tag}`, bot.user.displayAvatarURL)
     .setThumbnail(bot.user.displayAvatarURL)
-    .addField("r.daily","Get daily money.")
+    .addField("aj!daily","Get daily money.")
     .addField("missing","your bank.")
-    .addField("r.pay","send money.")
-    .addField("r.bal","your saldo.")
+    .addField("aj!pay","send money.")
+    .addField("aj!bal","your saldo.")
 
 message.channel.send(embed);
 }
