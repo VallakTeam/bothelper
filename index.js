@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const moment = require("moment");
 const music = new Discord.Client({disableEveryone: true});
 music.commands = new Discord.Collection();
 const superagent = require("superagent");
@@ -29,6 +30,9 @@ music.on("ready", function() {
       `user! | ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
       `server! | ${music.guilds.size.toLocaleString()}`,
       `channel! | ${music.channels.size.toLocaleString()}`,
+      `r.help | Jam: ${moment()
+        .utcOffset("+0700")
+        .format("HH:mm A")}`,
     ];
     const random = Math.floor(Math.random() * statuslist.length);
     try {
