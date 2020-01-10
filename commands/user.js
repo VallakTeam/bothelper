@@ -58,5 +58,5 @@ exports.run = (client, message) => {
   .catch(e => logger.error(e));
 };
 module.exports.help = {
-    name: 'r.user'
+    name: 'aj!user'
 };

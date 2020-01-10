@@ -90,5 +90,5 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 exports.help = {
     name: "skip",
     description: "Skips the current song thats playing!",
-    usage: "ms!skip"
+    usage: "skip"
 }

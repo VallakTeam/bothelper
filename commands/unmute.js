@@ -29,5 +29,5 @@ if(!channel) return message.channel.send("** Please create a mod-log channel!**"
 }
 
 module.exports.help = {
-  name: "r.unmute"
+  name: "unmute"
 }

@@ -96,6 +96,6 @@ const dispatcher = serverQueue.connection.playStream(yt(song.url))
 exports.help = {
     name: "queue",
     description: "Shows what music is in the queue",
-    usage: "pr!queue",
+    usage: "queue",
     note: "Have to be in a voiceChannel to call this command"
 }

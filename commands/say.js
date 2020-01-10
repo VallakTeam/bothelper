@@ -22,7 +22,7 @@ module.exports.run = (bot, message, args,) => {
 module.exports.config = {
     name: "say",
     description: "mengirim pesan yang dimasukkan ke saluran",
-    usage: "r.say",
+    usage: "aj!say",
     accessableby: "Staff",
     aliases: ["acc", "announcement"]
 }
