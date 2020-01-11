@@ -126,7 +126,6 @@ app.get("/", (request, response) => {
 });
 
 
-
 music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
