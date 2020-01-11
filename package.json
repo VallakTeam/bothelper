@@ -58,6 +58,7 @@
     "array-sort": "^1.0.0",
     "table": "^5.4.6",
     "snekfetch": "^3.6.4",
+    "path": "^0.12.7",
     "node-superfetch": "^0.1.9"
   }
 }
