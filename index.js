@@ -30,7 +30,7 @@ music.on("ready", function() {
       `user! | ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
       `server! | ${music.guilds.size.toLocaleString()}`,
       `channel! | ${music.channels.size.toLocaleString()}`,
-      `aj!help | Jam: ${moment()
+      `Jam: ${moment()
         .utcOffset("+0700")
         .format("HH:mm A")}`,
     ];
