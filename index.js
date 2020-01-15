@@ -24,38 +24,9 @@ setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
-music.on("ready", function() {
-  console.log(`${music.user.tag} has started!`);
-  setInterval(async () => {
-    const statuslist = [
-      `Google Chrome`,
-      `aj!help | Adit Jam Bot`,
-      `user! | ${music.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
-      `server! | ${music.guilds.size.toLocaleString()}`,
-      `channel! | ${music.channels.size.toLocaleString()}`,
-      `Jam: ${moment()
-        .utcOffset("+0700")
-        .format("HH:mm A")}`,
-    ];
-    const random = Math.floor(Math.random() * statuslist.length);
-    try {
-      await music.user.setPresence({
-        game: {
-          name: `${statuslist[random]}`,
-          type: "STREAMING",
-          url: "https://www.twitch.tv/rakanaditya"
-        },
-        status: "idle"
-      });
-    } catch (error) {
-      console.log("status error");
-    }
-  }, 2000);  
-});
-
 music.on('message', async message => {
 
-    let prefix = 'aj!';
+    let prefix = '~';
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
@@ -85,40 +56,6 @@ let vEmbed = new Discord.RichEmbed()
 message.channel.send(vEmbed);
 
   }
-});
-
-music.on('guildMemberAdd', member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'welcome-goodbye');
-	if (!channel) return;
-  let bicon = music.user.displayAvatarURL
-  let embed = new Discord.RichEmbed()
-  .setAuthor(`Welcome To Wibu My Life Otaku & Gamers`, music.user.displayAvatarURL)
-  .setColor("RANDOM")
-  .setTimestamp()
-  .setThumbnail(bicon)
-  .setDescription(`
-Your Identify :
-\`\`\Username : ${member.user.username}
-Tag : ${member.user.tag}'
-Member Now : ${member.guild.memberCount}\`\``)
-  if(channel) return channel.send(embed)
-});
-  
-music.on('guildMemberRemove', member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'welcome-goodbye');
-	if (!channel) return;
-  let bicon = music.user.displayAvatarURL
-  let embed = new Discord.RichEmbed()
-  .setAuthor(`GoodBye My Friends`, music.user.displayAvatarURL)
-  .setColor("RANDOM")
-  .setTimestamp()
-  .setThumbnail(bicon)
-  .setDescription(`
-Your Identify :
-\`\`\Username : ${member.user.username}
-Tag : ${member.user.tag}'
-Member Now : ${member.guild.memberCount}\`\``)
-  if(channel) return channel.send(embed)
 });
 
 app.get("/", (request, response) => {
