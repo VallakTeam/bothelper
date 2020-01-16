@@ -18,8 +18,8 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
      .setThumbnail("https://cdn.discordapp.com/avatars/666975140092837909/97b7199102b9a355b27a8c9e38575834.png?size=2048")
      .setColor('WHITE')
-     .addField  (`"New update sinki1.06"`,`[\`HERE DOWLOAD\`](http://www.mediafire.com/file/57qs2jw06m8jcsh/Sinki_0116.vmp.rar)`)//link dowload
-     .addField  (`"Our server"`,`[\`HERE SERVER\`](https://discord.gg/fwmzyR)`)//link server
+     .addField  ("**New update sinki1.06**",`[\`HERE DOWLOAD\`](http://www.mediafire.com/file/57qs2jw06m8jcsh/Sinki_0116.vmp.rar)`)//link dowload
+     .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/fwmzyR)`)//link server
 message.channel.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
