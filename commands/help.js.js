@@ -10,7 +10,3 @@ let embed = new Discord.RichEmbed()
 message.author.send({embed});
   message.reply ("l just send you **help** commands in your DMs 📥")
 }
-
-module.exports.help = {
-  name: "help"
-}
