@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
      .setThumbnail("https://cdn.discordapp.com/avatars/666975140092837909/97b7199102b9a355b27a8c9e38575834.png?size=2048")
      .setColor('WHITE')
-     .addField  ("**New update Sinki Hack1.06**",`[\`HERE DOWLOAD\`](http://www.mediafire.com/file/57qs2jw06m8jcsh/Sinki_0116.vmp.rar)`)//link dowload
+     .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐀𝐋𝐋 𝐈𝐍 𝐎𝐍𝐄**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/g0wvM/)`)//link dowload aioinki ganti mediafire nya
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
 message.channel.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
