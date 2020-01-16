@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     }
     }
     let embed = new Djs.RichEmbed()
-     .setThumbnail("https://cdn.discordapp.com/avatars/666975140092837909/97b7199102b9a355b27a8c9e38575834.png?size=2048")
+     .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
      .addField  ("**𝐅𝐔𝐋𝐋 𝐃𝐑𝐈𝐕𝐄𝐑**",`[\`HERE DOWLOAD\`](https://mega.nz/#!yjI33CLD!e_jxGZXuLDm9J0mRMUZtxuPMW2z1h903Xdiy8vpEUDo)`)//link dowload nya samain dnegan driver samin link dowload nya ganti https
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
