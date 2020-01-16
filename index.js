@@ -31,7 +31,7 @@ music.on('ready', () => {
 	];
 	setInterval(function() {
 		let activity = Activities[Math.floor(Math.random() * Activities.length)];
-		music.user.setActivity('$help | 4 servers', { type: 'playing' }); //
+		music.user.setActivity('$help | 319231 Servers', { type: 'playing' }); //
   }, 10000);
 });
 
