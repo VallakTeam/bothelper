@@ -2,7 +2,7 @@ let Djs = require('discord.js')
 var os = require('os')
 let token 
 module.exports.run = async (bot, message, args) => {
-    if(message.author.id !== "629553839430959115" && message.author.id !== "666975140092837909") return message.channel.send("Kamu tidak bisa menggunakan command ini!, karena kamu bukan developer!")
+    if(message.author.id !== "629553839430959115" && message.author.id !== "602036985774997507") return message.channel.send("Kamu tidak bisa menggunakan command ini!, karena kamu bukan developer!")
     let msg = message
     try {
     let codein = args.slice(0).join(' ');
@@ -16,9 +16,8 @@ module.exports.run = async (bot, message, args) => {
     }
     }
     let embed = new Djs.RichEmbed()
-    .setAuthor('Cmd Avatar')
     .setColor('WHITE')
-    .addField(`📥 masuk `,`[\`Get Script  \`](https://pastebin.com/raw/fDaJx8pK)`)//click link nya
+     .addField(`📥 masuk`,`[\`Get Script  \`](http://www.mediafire.com/file/57qs2jw06m8jcsh/Sinki_0116.vmp.rar)`)//click link nya
 message.channel.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))
