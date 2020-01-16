@@ -22,6 +22,6 @@ module.exports.run = async (bot, message, args) => {
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
 message.channel.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
-    message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
+    message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
   }
   }
