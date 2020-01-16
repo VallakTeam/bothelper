@@ -20,8 +20,10 @@ module.exports.run = async (bot, message, args) => {
      .setColor('WHITE')
      .addField  ("**𝐑𝐄𝐘𝐌𝐄𝐍 𝐇𝐀𝐂𝐊 v1.0**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/AHn7m/)`)//link dowload nya samain dnegan reyman ganti https
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
-message.channel.send(embed).then(msg => msg.react('✅'))
+message.react("✅");
+  message.delete(3000).catch(console.error);
+    message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
-    message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
+    message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
   }
   }

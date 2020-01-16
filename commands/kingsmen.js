@@ -18,10 +18,12 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
      .setThumbnail("https://cdn.discordapp.com/avatars/666975140092837909/97b7199102b9a355b27a8c9e38575834.png?size=2048")
      .setColor('WHITE')
-     .addField  ("**New Update 𝐊𝐈𝐍𝐆𝐒𝐌𝐄𝐍 𝐇𝐀𝐂𝐊 𝟒.𝟎**",`[\`HERE DOWLOAD\`](https://mega.nz/#!7llFFSbA!va4BWGiRlfPyNuYee64Wf4jFd7H9iFSQ8HO99DqjUbY)`)//link dowload nya samain dnegan kingsmen
+     .addField  ("**𝐁𝐄𝐀𝐒𝐓 𝐁𝐘𝐏𝐀𝐒𝐒**",`[\`HERE DOWLOAD\`](http://www.mediafire.com/file/tj18ikh38l95dh6/BEAST_BYPASS%25282%2529.rar/file)`)//link dowload nya samain dnegan kingsmen
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
-message.channel.send(embed).then(msg => msg.react('✅'))
+message.react("✅");
+  message.delete(3000).catch(console.error);
+    message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
-    message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
+    message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
   }
   }

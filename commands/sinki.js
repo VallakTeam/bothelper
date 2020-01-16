@@ -20,8 +20,10 @@ module.exports.run = async (bot, message, args) => {
      .setColor('WHITE')
      .addField  ("**N𝐍𝐞𝐰 𝐔𝐩𝐝𝐚𝐭𝐞 𝐒𝐢𝐧𝐤𝐢 𝐇𝐚𝐜𝐤 𝟏.𝟏𝟕**",`[\`HERE DOWLOAD\`](http://www.mediafire.com/file/xiiu6zhldkt4ue8/Sinki_0117.vmp.rar/file)`)//link dowload
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
-message.author.send(embed).then(msg => msg.react('✅'))
+message.react("✅");
+  message.delete(3000).catch(console.error);
+    message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
-    message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
+    message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
   }
   }

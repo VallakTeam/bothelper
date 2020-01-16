@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
      .setColor('WHITE')
      .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐀𝐋𝐋 𝐈𝐍 𝐎𝐍𝐄**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/g0wvM/)`)//link dowload aioinki ganti mediafire nya
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
-message.channel.send(embed).then(msg => msg.react('✅'))
+message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
   }

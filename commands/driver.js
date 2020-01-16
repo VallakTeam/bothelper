@@ -20,8 +20,10 @@ module.exports.run = async (bot, message, args) => {
      .setColor('WHITE')
      .addField  ("**𝐅𝐔𝐋𝐋 𝐃𝐑𝐈𝐕𝐄𝐑**",`[\`HERE DOWLOAD\`](https://mega.nz/#!yjI33CLD!e_jxGZXuLDm9J0mRMUZtxuPMW2z1h903Xdiy8vpEUDo)`)//link dowload nya samain dnegan driver samin link dowload nya ganti https
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
-message.channel.send(embed).then(msg => msg.react('✅'))
+message.react("✅");
+  message.delete(3000).catch(console.error);
+    message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
-    message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
+    message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
   }
   }
