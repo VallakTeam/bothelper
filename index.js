@@ -24,6 +24,18 @@ setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
+//set activity
+music.on('ready', () => {
+  console.log(`${music.user.username} is watching ${music.guilds.size} Discord Servers!`);
+	let Activities = [`People Join | ${music.guilds.size} Servers ${music.users.size} Users`,
+	];
+	setInterval(function() {
+		let activity = Activities[Math.floor(Math.random() * Activities.length)];
+		music.user.setActivity('$help | 4 servers', { type: 'playing' }); //
+  }, 10000);
+});
+
+//prefix $
 music.on('message', async message => {
 
     let prefix = '$';
