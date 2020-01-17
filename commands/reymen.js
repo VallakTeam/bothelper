@@ -2,7 +2,6 @@ let Djs = require('discord.js')
 var os = require('os')
 let token 
 module.exports.run = async (bot, message, args) => {
-    if(message.author.id !== "629553839430959115" && message.author.id !== "602036985774997507") return message.channel.send("Kamu tidak bisa menggunakan command ini!, karena kamu bukan developer!")
     let msg = message
     try {
     let codein = args.slice(0).join(' ');
