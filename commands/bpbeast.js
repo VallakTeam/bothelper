@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
      .addField  ("**𝐁𝐄𝐀𝐒𝐓 𝐁𝐘𝐏𝐀𝐒𝐒**",`[\`HERE DOWLOAD\`](http://www.mediafire.com/file/tj18ikh38l95dh6/BEAST_BYPASS%25282%2529.rar/file)`)//link dowload nya samain dnegan kingsmen
-     .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
+     .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
 message.react("✅");
   message.delete(3000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))

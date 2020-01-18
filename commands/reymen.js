@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
      .addField  ("**𝐑𝐄𝐘𝐌𝐄𝐍 𝐇𝐀𝐂𝐊**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/AHn7m/)`)//link dowload nya samain dnegan reyman ganti https
-     .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/yuHvPJ)`)//link server
+     .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
 message.react("✅");
   message.delete(3000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))
