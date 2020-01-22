@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐍𝐞𝐰 𝐔𝐩𝐝𝐚𝐭𝐞 𝐒𝐢𝐧𝐤𝐢 𝐇𝐚𝐜𝐤 𝟏.𝟏𝟕**",`[\`HERE DOWLOAD\`](http://www.mediafire.com/file/xiiu6zhldkt4ue8/Sinki_0117.vmp.rar/file)`)//link dowload
+     .addField  ("**𝐍𝐞𝐰 𝐔𝐩𝐝𝐚𝐭𝐞 𝐒𝐢𝐧𝐤𝐢 𝐇𝐚𝐜𝐤 𝟏.𝟏𝟕**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/A8vbC/)`)//link dowload
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
 message.react("✅");
   message.delete(3000).catch(console.error);

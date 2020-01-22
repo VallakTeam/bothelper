@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐀𝐋𝐋 𝐈𝐍 𝐎𝐍𝐄**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/g0wvM/)`)//link dowload aioinki ganti mediafire nya
+     .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐀𝐋𝐋 𝐈𝐍 𝐎𝐍𝐄**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/L9cDz/)`)//link dowload aioinki ganti mediafire nya
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
 message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {

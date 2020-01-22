@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
     .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐁𝐄𝐀𝐒𝐓 𝐁𝐘𝐏𝐀𝐒𝐒**",`[\`HERE DOWLOAD\`](http://www.mediafire.com/file/tj18ikh38l95dh6/BEAST_BYPASS%25282%2529.rar/file)`)//link dowload nya samain dnegan kingsmen
+     .addField  ("**𝐁𝐄𝐀𝐒𝐓 𝐁𝐘𝐏𝐀𝐒𝐒**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/BQ4GA/)`)//link dowload nya samain dnegan kingsmen
      .addField  ("**Support server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
 message.react("✅");
   message.delete(3000).catch(console.error);
