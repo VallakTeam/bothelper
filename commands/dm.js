@@ -14,5 +14,5 @@ message.delete();
             }
 
 module.exports.help = {
-    name: "dm"
+    name: "test"
 }
