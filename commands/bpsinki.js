@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐍𝐞𝐰 𝐔𝐩𝐝𝐚𝐭𝐞 𝐒𝐢𝐧𝐤𝐢 𝐁𝐲𝐩𝐚𝐬𝐬 𝟏.𝟏𝟕**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/b4E6N/)`)//link dowload bpsinki ganti mediafire nya dengan link dowload
+     .addField  ("**𝐍𝐞𝐰 𝐔𝐩𝐝𝐚𝐭𝐞 𝐒𝐢𝐧𝐤𝐢 𝐁𝐲𝐩𝐚𝐬𝐬 𝟏.𝟏𝟕**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/2VhjE/)`)//link dowload bpsinki ganti mediafire nya dengan link dowload
      .addField  ("**Support Server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
 message.react("✅");
   message.delete(3000).catch(console.error);
