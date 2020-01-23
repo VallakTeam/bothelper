@@ -24,6 +24,50 @@ setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
+music.on('guildMemberAdd', async member => {
+  //server message log wibu
+  const channel = member.guild.channels.find(ch => ch.id === '669973023146901504');
+  if (!channel) return;	
+
+  let namam = member.user.tag;
+  let username = namam.length > 12 ? namam.substring(0.10) + "" : namam;
+  let imageUrlPhoto = /\?size=2048$/g;
+
+async function createCanvas() {
+  
+  let image = 'https://cdn.discordapp.com/attachments/662300978845974549/665266319683485708/25255BUNSET25255D.png';
+  let thumimg = 'https://cdn.discordapp.com/attachments/642400791205773322/665283461296422932/20200110_034626.png';
+      
+            let { body : background } = await snekfetch.get(image);
+            let { body : thumbnail } = await snekfetch.get(thumimg);
+            let { body : avatar } = await snekfetch.get(member.user.avatarURL);
+           
+            return new Canvas(1000, 500)
+              .addImage(background, 0, 0, 1000, 500) // BACKGROUND
+              .addImage(thumbnail, 0, 0, 1000, 500) // THUMBNAIL
+              .addCircularImage(avatar, 189 , 180, 140) // PROFILE
+               
+              .setColor('#ffffff')
+              .setTextFont('40px sans-serif')
+              .setTextAlign('left')
+              .addText(`${username}`, 350, 225)
+              .addText(`Member: ${member.guild.memberCount}`, 350, 280)
+              
+              .setColor('#ffffff')
+              .setTextFont('40px sans-serif')
+              .setTextAlign('center')
+              .addText(`${member.guild.name}`, 635, 485)
+      
+              .toBufferAsync()
+    };
+    channel.send({
+    files: [{
+    attachment: await createCanvas(),
+    name: 'welcome.png'}] 
+  });    
+});
+
+
 //set activity
 music.on('ready', () => {
   console.log(`${music.user.username} is watching ${music.guilds.size} Discord Servers!`);
