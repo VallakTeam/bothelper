@@ -15,9 +15,9 @@ module.exports.run = async (bot, message, args) => {
     }
     }
     let embed = new Djs.RichEmbed()
-      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
+     .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("****",`[\`HERE DOWLOAD\`](https://sinkicheat.com/)`)//link dowload nya samain dnegan reyman ganti https
+     .addField  ("**𝐁𝐄𝐀𝐒𝐓 𝐁𝐘𝐏𝐀𝐒𝐒**",`[\`HERE DOWLOAD\`](https://sinkicheat.com/)`)//link dowload nya samain dnegan reyman ganti https
      .addField  ("**Our Server**",`[\`HERE DOWLOAD\`](https://discord.gg/wk5U3tt/)`)//link server
 message.react("✅");
   message.delete(2000).catch(console.error);
