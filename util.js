@@ -1,4 +1,4 @@
-const snek = require("node-superfetch");
+  const snek = require("node-superfetch");
 
 class Util {
   static timeParser(time) {
