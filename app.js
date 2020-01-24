@@ -13,7 +13,7 @@ const commands = JSONparse(fs.readFileSync('Strotage/commands.json', 'utf8'));
 const serverPrefixes = JSON.parse(fs.readFileSync('Strotage/serverPrefixes.json', 'utf8'))
 
 
-const prefix = 'aj!'
+const prefix = "$"
 
 
 music.on('message', message => {

@@ -24,6 +24,13 @@ setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
+//nge tes welome $welcome
+music.on('message', message => {
+	if (message.content === "$welcome") {
+		music.emit('guildMemberAdd', message.member);
+	};
+});
+
 music.on('guildMemberAdd', async member => {
   //server message
   const channel = member.guild.channels.find(ch => ch.id === '669973023146901504');
