@@ -25,7 +25,7 @@ setInterval(() => {
 }, 280000);
 
 music.on('guildMemberAdd', async member => {
-  //server message log wibu
+  //server message
   const channel = member.guild.channels.find(ch => ch.id === '669973023146901504');
   if (!channel) return;	
 
