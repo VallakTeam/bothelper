@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
      .addField  ("**𝐀𝐔𝐓𝐎 𝐂𝐋𝐄𝐀𝐑 𝐓𝐄𝐌𝐏**",`[\`HERE DOWLOAD\`](https://mega.nz/#!xhZShS5A!v8I1wehW9dlUtCvxU1poaiH9HX4v1Tt4awc6PIOhGgY)`)//link dowload samain link doload nya temps
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
 message.react("✅");
-  message.delete(3000).catch(console.error);
+  message.delete(2000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton

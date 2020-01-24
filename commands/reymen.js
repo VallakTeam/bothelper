@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
      .addField  ("**𝐑𝐄𝐘𝐌𝐄𝐍 𝐇𝐀𝐂𝐊**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/AHn7m/)`)//link dowload nya samain dnegan reyman ganti https
      .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
 message.react("✅");
-  message.delete(3000).catch(console.error);
+  message.delete(2000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton

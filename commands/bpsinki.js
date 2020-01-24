@@ -17,10 +17,10 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐁𝐘𝐏𝐀𝐒 𝐕𝐄𝐑𝐘 𝐕𝐄𝐑𝐘 𝐒𝐀𝐅𝐄 𝟏𝟎𝟎𝟎𝟎𝟎%**",`[\`HERE DOWLOAD\`](https://sinkicheat.com/)`)//link dowload nya samain dnegan reyman ganti https
+     .addField  ("**NO LIMIT**",`[\`HERE DOWLOAD\`](https://sinkicheat.com/)`)//link dowload nya samain dnegan reyman ganti https
      .addField  ("**Our Server**",`[\`HERE DOWLOAD\`](https://discord.gg/wk5U3tt/)`)//link server
 message.react("✅");
-  message.delete(3000).catch(console.error);
+  message.delete(2000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
