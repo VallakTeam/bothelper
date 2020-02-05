@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
      .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐀𝐋𝐋 𝐈𝐍 𝐎𝐍𝐄**",`[\`HERE DOWLOAD\`](https://www.ytsubme.com/_/L9cDz/)`)//link dowload aioinki ganti mediafire nya
-     .addField  ("**Our Server**",`[\`HERE SERVER\`](https://discord.gg/TRaH9k4)`)//link server
+     .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://www.youtube.com/channel/UC3WbAx_l7HtseSWpxRYI6rw)`)//link server
 message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.channel.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton

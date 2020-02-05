@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
      .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐇𝐀𝐂𝐊**",`[\`HERE DOWLOAD\`](https://sinkicheat.com/)`)//link dowload nya samain dnegan reyman ganti https
-     .addField  ("**Our Server**",`[\`HERE DOWLOAD\`](https://discord.gg/wk5U3tt/)`)//link server
+     .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://www.youtube.com/channel/UC3WbAx_l7HtseSWpxRYI6rw)`)//link server
 message.react("✅");
   message.delete(2000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))
