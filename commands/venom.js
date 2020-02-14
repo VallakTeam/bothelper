@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐁𝐄𝐀𝐒𝐓 𝐁𝐘𝐏𝐀𝐒𝐒**",`[\`HERE DOWLOAD\`](http://www.nozzygaming.me/)`)//link dowload nya samain dnegan reyman ganti https
+     .addField  ("**𝐕𝐄𝐍𝐎𝐌 𝐏𝐑𝐎**",`[\`HERE DOWLOAD\`](https://mega.nz/#F!1QFS1KqA!6HVjnxmr9SHHzNZ6PHxXRA)`)//link dowload nya samain dnegan reyman ganti https
      .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://www.youtube.com/channel/UC3WbAx_l7HtseSWpxRYI6rw)`)//link server
 message.react("✅");
   message.delete(2000).catch(console.error);
