@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message, args, color, queue) => {
 let embed = new Discord.RichEmbed()
 .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
   .setColor("#4290AE")

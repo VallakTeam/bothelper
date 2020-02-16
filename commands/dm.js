@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (music, message, args, color, queue) => {
 
 let mentioneddude = message.mentions.members.first();
             if (!mentioneddude) return message.channel.send('Please mentioned a user.')

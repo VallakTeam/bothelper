@@ -1,7 +1,7 @@
 let Djs = require('discord.js')
 var os = require('os')
 let token 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message, args, color, queue) => {
     let msg = message
     try {
     let codein = args.slice(0).join(' ');
