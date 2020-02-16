@@ -130,7 +130,7 @@ music.on('voiceStateUpdate', (oldMember, newMember) => {
 
   if(newMember.voiceChannelID === voicekita){
 
-    newMember.guild.createChannel(`${newMember.user.username}`, 'voice')
+    newMember.guild.createChannel(`${newMember.user.username}`, {type: 'voice'})
     .then(tempChannel => {
       tempChannel.setParent(categorykita);
       newMember.setVoiceChannel(tempChannel.id);
