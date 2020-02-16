@@ -121,6 +121,44 @@ message.channel.send(vEmbed);
   }
 });
 
+
+//join to create
+music.on('voiceStateUpdate', (oldMember, newMember) => {
+
+  const categorykita = '668221576079999013'
+  const voicekita = '678663446702719014'
+
+  if(newMember.voiceChannelID === voicekita){
+
+    newMember.guild.createChannel(`${newMember.user.username}`, 'voice')
+    .then(tempChannel => {
+      tempChannel.setParent(categorykita);
+      newMember.setVoiceChannel(tempChannel.id);
+      tempChannel.setUserLimit('10');
+      })
+      .catch(console.error);
+
+  }
+
+  if(oldMember.voiceChannelID) {
+
+    const voicelama = oldMember.guild.channels.get(oldMember.voiceChannelID);
+
+    if(voicelama.name.startsWith(`${oldMember.user.username}`)) {
+      voicelama.delete()
+      .then(function() {
+        console.log('sudah di hapus yang lama')
+      })
+      .catch(console.error);
+    }
+
+  }
+
+})
+
+
+
+
 app.get("/", (request, response) => {
   response.sendStatus(200);
 });
