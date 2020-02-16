@@ -17,8 +17,8 @@ module.exports.run = async (bot, message, args, color, queue) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐅𝐔𝐋𝐋 𝐃𝐑𝐈𝐕𝐄𝐑**",`[\`HERE DOWLOAD\`](https://mega.nz/#!yjI33CLD!e_jxGZXuLDm9J0mRMUZtxuPMW2z1h903Xdiy8vpEUDo)`)//link dowload nya samain dnegan driver samin link dowload nya ganti https
-     .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://www.youtube.com/channel/UC3WbAx_l7HtseSWpxRYI6rw`)//link server
+     .addField  ("**𝐅𝐔𝐋𝐋 𝐃𝐑𝐈𝐕𝐄𝐑**",`[\`HERE DOWLOAD\`](https://mega.nz/#!yjI33CLD!e_jxGZXuLDm9J0mRMUZtxuPMW2z1h903Xdiy8vpEUDo)`)//link dowload nya samain dnegan reyman ganti https
+     .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://www.youtube.com/channel/UC3WbAx_l7HtseSWpxRYI6rw)`)//link server
 message.react("✅");
   message.delete(2000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))
