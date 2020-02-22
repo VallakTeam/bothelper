@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args, color, queue) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐕𝐄𝐍𝐎𝐌 𝐏𝐑𝐎**",`[\`HERE DOWLOAD\`](https://mega.nz/#F!TxN3ACZQ!7YgLtp_JkDg-3cAterrj_w)`)//link dowload nya samain dnegan reyman ganti https
+     .addField  ("**𝐕𝐄𝐍𝐎𝐌 𝐏𝐑𝐎**",`[\`HERE DOWLOAD\`](https://s2.dosya.tc/server12/lne126/Venom_update.rar.html)`)//link dowload nya samain dnegan reyman ganti https
      .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://www.youtube.com/channel/UC3WbAx_l7HtseSWpxRYI6rw)`)//link server
 message.react("✅");
   message.delete(2000).catch(console.error);
