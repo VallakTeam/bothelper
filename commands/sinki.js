@@ -17,8 +17,8 @@ module.exports.run = async (bot, message, args, color, queue) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐇𝐀𝐂𝐊**",`[\`HERE DOWLOAD\`](https://sinkicheat.com/)`)//link dowload nya samain dnegan reyman ganti https
-     .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://rebrand.ly/74d0b)`)//link server
+     .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐇𝐀𝐂𝐊**",`[\`HERE DOWLOAD\`](http://www.nozzygaming.me/)`)
+     .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://rebrand.ly/4e918)`)//link server
 message.react("✅");
   message.delete(2000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))
