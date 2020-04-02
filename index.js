@@ -154,7 +154,7 @@ music.on('voiceStateUpdate', (oldMember, newMember) => {
 
   }
 
-})//babi liat di server bot
+})
 
 
 
