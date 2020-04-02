@@ -176,4 +176,4 @@ music.on("ready", async () => {
              
 });
 
-client.login("NjY2MjU2ODQwMzE2ODEzMzM1.Xn_ZVA.etoQHxe1jb6rS1rMQEDFEykOIQA")
+music.login("NjY2MjU2ODQwMzE2ODEzMzM1.Xn_ZVA.etoQHxe1jb6rS1rMQEDFEykOIQA");
