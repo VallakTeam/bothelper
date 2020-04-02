@@ -164,7 +164,7 @@ app.get("/", (request, response) => {
 });
 
 
-music.login(process.env.TOKEN);
+
 
 music.on("ready", async () => {
   
@@ -176,3 +176,4 @@ music.on("ready", async () => {
              
 });
 
+client.login("NjY2MjU2ODQwMzE2ODEzMzM1.Xn_ZVA.etoQHxe1jb6rS1rMQEDFEykOIQA")
