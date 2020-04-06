@@ -43,7 +43,7 @@ music.on('guildMemberAdd', async member => {
 async function createCanvas() {
   
   let image = 'https://cdn.discordapp.com/attachments/662300978845974549/665266319683485708/25255BUNSET25255D.png';
-  let thumimg = 'https://cdn.discordapp.com/attachments/642400791205773322/665283461296422932/20200110_034626.png';
+  let thumimg = 'https://cdn.discordapp.com/attachments/642400791205773322/665283461296422932/20200110_034626.png'; //https://cdn.discordapp.com/attachments/669136295762591744/696734856536653896/welcome-image.jpg
       
             let { body : background } = await snekfetch.get(image);
             let { body : thumbnail } = await snekfetch.get(thumimg);
