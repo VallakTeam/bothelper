@@ -8,7 +8,7 @@ let embed = new Discord.RichEmbed()
   .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
   .setThumbnail(`${message.author.avatarURL}`)
 .setTitle('𝐇𝐄𝐋𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃')
-.addField("黑𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐌𝐘 𝐂𝐎𝐌𝐌𝐀𝐍𝐃黑", "$sinki | Link Download SINKI New 3.31\n$bpsinki | Link Download Bypass SINKI V2.1\n$venom | Link Download VENOM 1.8\n$aio | Link Download SINKI All In One Tool V1.6\n$driver | Link Download Full Driver\n$temp | Link Download Auto Clear Temp")
+.addField("黑𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐌𝐘 𝐂𝐎𝐌𝐌𝐀𝐍𝐃黑", "$sinki | Link Download SINKI V4.09-FINAL\n$bpsinki | Link Download Bypass SINKI V2.1\n$venom | Link Download VENOM 1.9\n$aio | Link Download SINKI All In One Tool V1.6\n$driver | Link Download Full Driver\n$temp | Link Download Auto Clear Temp")
 message.author.send({embed});
   message.react("✅");
   message.delete(2000).catch(console.error);//delete 3000 aja
