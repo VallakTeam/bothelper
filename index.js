@@ -9,7 +9,7 @@ const superagent = require("superagent");
 const {color} = require('./config.json');
 const queue = new Map();
 const ytdl = require("ytdl-core");
-const Canvas = require('canvas-constructor');
+const Canvas = require('canvas');
 
 const http = require('http');
 const fs = require("fs");
@@ -33,7 +33,7 @@ music.on('message', message => {
 
 music.on('guildMemberAdd', async member => {
   //server message
-  const channel = member.guild.channels.find(ch => ch.id === '696829034528505996');
+  const channel = member.guild.channels.find(ch => ch.id === '669973023146901504');
   if (!channel) return;	
 
   let namam = member.user.tag;
@@ -176,4 +176,4 @@ music.on("ready", async () => {
              
 });
 
-music.login("Njk1MzA1Mzg1NjEwOTY5MTU4.XtE_bg.SxtD3gZDj7zZpSQv71PQUV88D38");
+music.login("Njk1MzA1Mzg1NjEwOTY5MTU4.XriiaA.kcfdseuMnKRcvOAe2BwtvRBdK7k");
