@@ -33,7 +33,7 @@ music.on('message', message => {
 
 music.on('guildMemberAdd', async member => {
   //server message
-  const channel = member.guild.channels.find(ch => ch.id === '669973023146901504');
+  const channel = member.guild.channels.find(ch => ch.id === '804826905411846174');
   if (!channel) return;	
 
   let namam = member.user.tag;
