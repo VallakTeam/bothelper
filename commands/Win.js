@@ -16,8 +16,7 @@ module.exports.run = async (bot, message, args, color, queue) => {
     }
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
-     .setColor('WHITE')
-     .addField  ("**𝐒𝐈𝐍𝐊𝐈 𝐁𝐘𝐏𝐀𝐒𝐒**",`[\`HERE DOWLOAD\`](https://sinkicheat.com/)`)//link dowload samain link doload nya temps
+      .addField  ("**WINRAR**",`[\`HERE DOWLOAD\`](https://cdn.discordapp.com/attachments/785938311776698378/785965126402441226/winrar-x64-600.exe)`)//link dowload aioinki ganti mediafire nya
      .addField  ("**𝐎𝐔𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄**",`[\`𝐍𝐄𝐖 𝐘𝐎𝐔𝐓𝐔𝐁𝐄\`](https://rebrand.ly/4e918)`)//link server
 message.react("✅");
   message.delete(2000).catch(console.error);
