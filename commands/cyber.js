@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args, color, queue) => {
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
     .setThumbnail(`${message.author.avatarURL}`)
      .setColor('WHITE')
-     .addField  ("**CYBER HACK NEW UPDATE**",`[\`HERE DOWLOAD\`](https://www.cyberhackid.xyz/)`)//link dowload samain link doload nya temps
+     .addField  ("**CYBER HACK NEW UPDATE**",`[\`HERE DOWLOAD\`](https://cdn.discordapp.com/attachments/785967112257929267/812376929021329448/20022021.rar)`)//link dowload samain link doload nya temps
     .addField  ("**DEV**",`[\`@vallak_team09\`](https://bit.ly/2X3AcHe)`)//link server
     .setTimestamp();
 message.react("✅");
