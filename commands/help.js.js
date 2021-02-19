@@ -9,7 +9,7 @@ let embed = new Discord.RichEmbed()
   .setThumbnail(`${message.author.avatarURL}`)
   .setTitle('𝐇𝐄𝐋𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃')
   .addField("𝐏𝐊  𝐂𝐎𝐌𝐌𝐀𝐍𝐃" , "$win | Link Download Winrar x64-600\n$macro | Link Download X Mouse 2.19.2\n$cyber | Link Download Cyber Hack Id New Update\n$gembel | Link Download Gembel Cheat New Update")
- message.channel.send(embed);
+ message.author.send({embed});
   
   message.react("✅");
   message.delete(3000).catch(console.error);//delete 3000 aja
