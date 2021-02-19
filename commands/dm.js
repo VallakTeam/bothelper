@@ -7,7 +7,7 @@ let mentioneddude = message.mentions.members.first();
 
             let message2 = args.slice(1).join("")
             if (!message2) return message.channel.send('Please provide a message.')
-
+.setThumbnail(`${message.author.avatarURL}`)
             mentioneddude.send(message2)
 message.delete();
            

@@ -16,6 +16,7 @@ module.exports.run = async (bot, message, args, color, queue) => {
     }
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
+    .setThumbnail(`${message.author.avatarURL}`)
      .setColor('WHITE')
      .addField  ("**GEMBEL CHEAT AUTO UPDATE**",`[\`HERE DOWLOAD\`](https://www.gembelcit.net/)`)//link dowload samain link doload nya temps
      .addField  ("**DEV**",`[\`@vallak_team09\`](https://bit.ly/2X3AcHe)`)//link server
