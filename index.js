@@ -147,7 +147,7 @@ music.on('voiceStateUpdate', (oldMember, newMember) => {
     if(voicelama.name.startsWith(`${oldMember.user.username}`)) {
       voicelama.delete()
       .then(function() {
-        console.log('sudah di hapus yang lama')
+        console.log('Bot Is Online 24/7')
       })
       .catch(console.error);
     }
