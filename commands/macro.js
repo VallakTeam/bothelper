@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args, color, queue) => {
      .addField  ("**DEV**",`[\`@vallak_team09\`](https://bit.ly/2X3AcHe)`)//link server
     .setTimestamp();
 message.react("✅");
-  message.delete(2000).catch(console.error);
+  message.delete(3000).catch(console.error);
     message.author.send(embed).then(msg => msg.react('✅'))
   } catch (e) {
     message.author.send(`\`\`\`js\n${e}\n\`\`\``).then(msg => msg.react("❌"))//reaciton
