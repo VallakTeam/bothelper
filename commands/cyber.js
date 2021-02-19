@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args, color, queue) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
      .setColor('WHITE')
-     .addField  ("**cyber auto update**",`[\`HERE DOWLOAD\`](https://www.cyberhackid.xyz/)`)//link dowload samain link doload nya temps
+     .addField  ("**CYBER HACK AUTO UPDATE**",`[\`HERE DOWLOAD\`](https://www.cyberhackid.xyz/)`)//link dowload samain link doload nya temps
      .addField  ("**DEV**",`[\`@vallak_team09\`](https://bit.ly/2X3AcHe)`)//link server
 message.react("✅");
   message.delete(2000).catch(console.error);
