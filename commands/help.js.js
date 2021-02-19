@@ -8,7 +8,7 @@ let embed = new Discord.RichEmbed()
   .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
   .setThumbnail(`${message.author.avatarURL}`)
   .setTitle('𝐇𝐄𝐋𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃')
-  .addField("𝐏𝐊  𝐂𝐎𝐌𝐌𝐀𝐍𝐃" , "$macro | Link Download X Mouse 2.19.2\n$cyber | Link Download Cyber Hack Id Auto Update\n$gembel | Link Download Gembel Cheat Auto Update\n$win Link Download Winrar x64-600")
+  .addField("𝐏𝐊  𝐂𝐎𝐌𝐌𝐀𝐍𝐃" , "$macro | Link Download X Mouse 2.19.2\n$cyber | Link Download Cyber Hack Id New Update\n$gembel | Link Download Gembel Cheat New Update\n$win | Link Download Winrar x64-600")
  message.author.send({embed});
   
   message.react("✅");

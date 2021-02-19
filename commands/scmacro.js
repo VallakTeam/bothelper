@@ -17,8 +17,7 @@ module.exports.run = async (bot, message, args, color, queue) => {
     let embed = new Djs.RichEmbed()
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
     .setThumbnail(`${message.author.avatarURL}`)
-     .setColor('WHITE')
-     .addField  ("**GEMBEL CHEAT NEW UPDATE**",`[\`HERE DOWLOAD\`](https://www.gembelcit.net/)`)//link dowload samain link doload nya temps
+      .addField  ("**WINRAR**",`[\`HERE DOWLOAD\`](https://cdn.discordapp.com/attachments/785938311776698378/785965126402441226/winrar-x64-600.exe)`)//link dowload aioinki ganti mediafire nya
      .addField  ("**DEV**",`[\`@vallak_team09\`](https://bit.ly/2X3AcHe)`)//link server
     .setTimestamp();
 message.react("✅");

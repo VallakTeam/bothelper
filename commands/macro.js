@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args, color, queue) => {
      .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
     .setThumbnail(`${message.author.avatarURL}`)
      .setColor('WHITE')
-     .addField  ("**marco**",`[\`HERE DOWLOAD\`](https://cdn.discordapp.com/attachments/785938311776698378/786987712389054494/x-mouse-button-control-2-19-2.exe)`)//link dowload samain link doload nya temps
+     .addField  ("**MOUSE MACRO**",`[\`HERE DOWLOAD\`](https://cdn.discordapp.com/attachments/785938311776698378/786987712389054494/x-mouse-button-control-2-19-2.exe)`)//link dowload samain link doload nya temps
      .addField  ("**DEV**",`[\`@vallak_team09\`](https://bit.ly/2X3AcHe)`)//link server
     .setTimestamp();
 message.react("✅");
